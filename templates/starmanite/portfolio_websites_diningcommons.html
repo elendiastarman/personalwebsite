@@ -1,0 +1,30 @@
+{% extends 'starmanite/portfolio_websites.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:diningcommons' %}">Employee Scheduling (Dining Commons)</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<p>I did the tutorial for Django in a weekend and then almost immediately set about working on a full-fledged website. Following tips from
+		one of my supervisors at my Dining Commons job, I designed and developed an employee scheduling website that was intended to replace their
+		current one. As it happened, that plan fell through because, unbeknowest to me, Dining Services (the organization that encompassed Dining
+		Commons) was already in negotiations with another company and was planning on installing their product. Nonetheless, my Django skills and
+		my general web development skills improved greatly over the three months that I worked on the website.</p>
+		
+		<p>The site can be viewed here: <a href="http://dctest.elendia.webfactional.com/">Dining Commons Demo</a>. <em>Note: website-breaking bugs
+		abound because I'm not quite done setting it up fully. You have been warned.</em></p>
+		
+		<p>These usernames and passwords can be used to explore the site's functionality (in the form "<em>username</em>": "<em>password</em>"):
+		<ul>
+			<li>testsupervisor: testsupervisor</li>
+			<li>testmanager: testmanager</li>
+			<li>testworker: testworker</li>
+		</ul>
+		</p>
+	
+	</div>
+{% endblock %}

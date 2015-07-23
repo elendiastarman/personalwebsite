@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
+		<script type="text/javascript" src="{% static 'starmanite/headerfooter.js' %}"></script>
+		
+		{% block stylingAndScripts %}
+		{% endblock %}
+	</head>
+	
+	<body>
+	
+		<div id="header">
+			<a href="{% url 'index:home' %}">
+				<img src="{% static 'starmanite/StarmanInnovations_logo2_large.png' %}"
+					 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
+			</a>
+			<h3>You are here: {% block path %}{% endblock %}</h3>
+		</div>
+		
+		<br style="float: clear;"/>
+		<table class="tabtable"><tr>
+			<td><a href="{% url 'index:products' %}">{% block products %}Products{% endblock %}</a></td>
+			<td><a href="{% url 'index:writing' %}">{% block writing %}Writing{% endblock %}</a></td>
+			<td><a href="{% url 'index:portfolio' %}">{% block portfolio %}Portfolio{% endblock %}</a></td>
+			<td><a href="{% url 'index:information' %}">{% block information %}Information{% endblock %}</a></td>
+		</tr></table>
+		<hr/>
+	
+		<div id="main">
+			{% block main %}
+			{% endblock %}
+		</div>
+	
+	</body>
+</html>

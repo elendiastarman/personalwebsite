@@ -1,0 +1,45 @@
+{% extends 'starmanite/portfolio_2dartwork.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:sprites' %}">Sprites</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<div id="minitoc" style="float: right; border: 1px solid #500070; margin: 0px; padding: 20px;">
+			<p style="margin-top: 0px;">Mini table of contents</p>
+			<ul style="list-style-type: none; text-align: right; margin-top: 0px; margin-bottom: 0px;">
+				<li><a href="{% url 'index:doodles' %}">Doodles</a></li>
+				<li><strong>Sprite Comics</strong></li>
+				<li><a href="{% url 'index:art-misc' %}">Miscellaneous</a></li>
+			</ul>
+		</div>
+	
+		<p id="sprites" class="section"><a href="#sprites">Sprite Comics</a></p>
+		
+		<p><strong>2008</strong><br/>
+		<img src="{% static 'starmanite/2D examples/Comic1_The_Grand_Entrance.1.1.PNG' %}"" width="25%"/><br/>
+		<img src="{% static 'starmanite/2D examples/Comic2_The_First_Paradox.PNG' %}"" width="25%"/><br/>
+		
+		<hr/>
+		
+		<strong>2009</strong><br/>
+		<img src="{% static 'starmanite/2D examples/Comic3_The_Grandfather_Paradox.3_revision1.PNG' %}"" width="25%"/><br/>
+		<img src="{% static 'starmanite/2D examples/Comic4_The_Unexpected_Hanging.3.PNG' %}"" width="25%"/><br/>
+		
+		<hr/>
+		
+		<strong>2010</strong><br/>
+		<img src="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}" width="25%"/>
+		</p>
+		
+		<hr/>
+		
+		<p><strong>Current sprite sheet:</strong><br/>
+		<img src="{% static 'starmanite/2D examples/LumienTH_V1.6_3_3.6.png' %}" width="25%"/><br/>
+		<em>Use only with permission.</em></p>
+
+	</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<title>Starman Innovations</title>
+		
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/home.css' %}" />
+		<!-- <script type="text/javascript" src="{% static 'scheduler/headerFooter.js' %}"></script> -->
+	</head>
+	
+	<body>
+		<a href="{% url 'index:home' %}">
+			<img src="{% static 'starmanite/StarmanInnovations_logo2_large.png' %}"
+					 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
+		</a>
+
+		<table>
+			<tr onclick="window.location.href='{% url 'index:products' %}'">
+				<td>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</td>
+				<td>
+					<h2>Products</h2>
+					<p>Things for sale!</p>
+				</td>
+				<td>
+					<ul class="subcategories">
+						<li>Programs</li>
+						<li>3D Printing</li>
+						<li>Commissions</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr onclick="window.location.href='{% url 'index:writing' %}'">
+				<td>
+					<h2>Writing</h2>
+					<p>Things I wrote!</p>
+				</td>
+				<td>
+					<ul class="subcategories">
+						<li>Stories</li>
+						<li>Blog</li>
+						<li>Academic</li>
+					</ul>
+				</td>
+				<td>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</td>
+			</tr>
+			
+			<tr onclick="window.location.href='{% url 'index:portfolio' %}'">
+				<td>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</td>
+				<td>
+					<h2>Portfolio</h2>
+					<p>Things I made!</p>
+				</td>
+				<td>
+					<ul class="subcategory">
+						<li>Mathematics</li>
+						<li>Programming</li>
+						<li>3D Modelling</li>
+						<li>2D Artwork</li>
+						<li>Triumphs</li>
+						<li>Websites</li>
+					</ul>
+				</td>
+			</tr>
+			
+			<tr onclick="window.location.href='{% url 'index:information' %}'">
+				<td>
+					<h2>Information</h2>
+					<p>Things about me!</p>
+				</td>
+				<td>
+					<ul class="subcategory">
+						<li>Contact</li>
+						<li>Where Else I Can Be Found</li>
+						<li>Resume</li>
+						<li>Education</li>
+						<li>Job History</li>
+					</ul>
+				</td>
+				<td>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

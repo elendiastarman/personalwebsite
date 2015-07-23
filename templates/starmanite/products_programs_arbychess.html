@@ -1,0 +1,63 @@
+{% extends 'starmanite/products_programs.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:arbychess' %}">ArbyChess</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<ul>
+			<li><a href="#inspiration">Inspiration</a></li>
+			<li><a href="#design">Design</a></li>
+			<li><a href="#techniques">Coding Techniques</a></li>
+		</ul>
+		
+		<hr/>
+		
+		<p id="inspiration" class="section"><a href="#inspiration">Inspiration</a></p>
+		
+		<p>A couple years ago, I decided to write a chess engine. But not just a simple, ordinary chess game. I deemed that too easy and simple. 
+		I wanted a challenge, so I decided to make a chess <em>engine</em> that could handle arbitrary boards, pieces, and moves. Thus, ArbyChess 
+		was born, and the name is a shortening of "arbitrary chess".</p>
+		
+		<p>A .zip file containing the executable and the necessary files to play chess can be downloaded from here: 
+		<a href="{% static 'starmanite/ArbyChess_v0.8.9.zip' %}">ArbyChess_v0.8.9.zip</a>.</p>
+		
+		<hr/>
+		
+		<p id="design" class="section"><a href="#design">Design</a></p>
+		
+		<p>I had never undertaken a project of this scale before (unless <a href="{% url 'index:sigprogs' %}#mappingschool">Mapping the School</a> counts) 
+		so, instead of starting the code right away, I spent a lot of time thinking about it. I wanted to have a sufficiently complex engine that 
+		could run a very wide variety of chess-like games, but I also wanted to be sure that it wouldn't be too complex. I wrote down some code 
+		on a whiteboard and also drew a dependence tree to prioritize the functions and features that I needed to do first. At the time of writing, 
+		the only features left to implement to have a fully functioning chess engine are promotion, check, and checkmate. <br/><br/>
+		As to the underlying design of the engine, Blitz 2D does not have local multidimensional arrays (multidimensional arrays are global and 
+		local arrays are one-dimensional), so I had to be a bit creative. The cells that make up the board form a 2D linked array, and they also 
+		have pointers to the pieces on them. The pieces themselves have moves associated with them. Such is the underlying structure of the engine, 
+		and all of the functions and features are built on this structure.</p>
+		
+		<hr/>
+		
+		<p id="techniques" class="section"><a href="#techniques">Coding Techniques</a></p>
+		
+		<p><strong>External customizability</strong> is one feature that I had in my code from the beginning. What I mean by that is that very little 
+		is hard-coded, so the engine gets most of its information from a text file that is read in and parsed. The <em>import</em> function is a huge 
+		chunk of the code as there isn't a built-in function that operates like Python's <em>split</em>, so I had to parse it myself with functions 
+		that Blitz 2D did provide, specifically <em>Instr</em> and <em>Mid</em>, which returned the position of a character and a specified substring, 
+		respectively. The external text file provides information such as the positions of cells, their neighbors, their pieces, and their moves.</p>
+		
+		<p><strong>Linked lists</strong> abound in my code. Blitz 2D does not support lists of objects, but thankfully it does support linking 
+		from one object to another. Hence, in several places, I use doubly-linked lists and I wrote functions to make it easier to add, get, and 
+		remove objects from those linked lists.</p>
+		
+		<p><strong>Bug-free</strong> is a quality I like in my programs. Before I add a new feature, I make sure that my code is bug-free by tracking 
+		down and fixing bugs. I have been known to stay awake well into the wee hours of the morning just to fix one bug. Once my code is bug-free, 
+		then I increment the version number and save (thus employing a rudimentary version of <strong>source control</strong>). That way, any later 
+		bugs I encounter are almost certainly a result of the new code I added, which makes it easier to locate and eliminate them. I have known and 
+		understood almost since I started programming that bugs are far easier to get rid of if they are taken care of as soon as possible and not 
+		later, when the code has grown in size and complexity.</p>
+	</div>
+{% endblock %}

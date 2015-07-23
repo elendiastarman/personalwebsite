@@ -1,0 +1,16 @@
+{% extends 'starmanite/portfolio_websites.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:starmaninnovations' %}">Starman Innovations</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<p>I include this very website in my portfolio. I built it using Django, along with HTML, CSS, and a little bit of Javascript.
+		Over time, I plan to add more elements that will use Javascript and other web technologies more heavily.</p>
+	
+	</div>
+{% endblock %}

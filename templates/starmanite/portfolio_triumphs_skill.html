@@ -1,0 +1,50 @@
+{% extends 'starmanite/portfolio_triumphs.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:skill' %}">Skill-based</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<ul>
+			<li><a href="#academic">Academic</a></li>
+			<li><a href="#martialarts">Martial Arts</a></li>
+			<li><a href="#miscell">Miscellaneous</a></li>
+		</ul>
+		
+		<hr/>
+		
+		<p id="academic" class="section"><a href="#academic">Academic</a></p>
+		
+		<p><strong>Standardized Tests</strong> &mdash; On the SAT, I achieved a score of 2100, out of 2400 possible, 
+		and on the ACT I achieved a score of 35, out of 36 possible. A 35 on the ACT is roughly equivalent to a 2340 
+		on the SAT and both are very high scores.</p>
+		
+		<p><strong>North Carolina School of Science and Mathematics</strong> &mdash; NCSSM is literally one of the best 
+		high schools in the nation. Newsweek considers it "too elite to rank" on its annual list of best high schools. I 
+		was one of about 340 applicants that were accepted out of a pool of about 2,500 my year.</p>
+		
+		<hr/>
+		
+		<p id="martialarts" class="section"><a href="#martialarts">Martial Arts</a></p>
+		
+		<p><strong>Tae Kwon Do</strong> &mdash; I started doing Tae Kwon Do shortly after my 8th birthday in 2000. Not long after my 15th birthday in 
+		2007, I received my 3rd degree black belt. I continued going to classes regularly until around 2009-2010, which means I did Tae Kwon Do for about 
+		10 years. I went to competitions two or three times, competing in Forms in all of them. I earned one bronze medal for that.</p>
+		
+		<p><strong>Capoeira</strong> &mdash; I started doing capoeira when I came to RIT in the fall of 2011. Since then, I have developed a decent level 
+		of skill. I have not yet earned a green cord, but I hope to do so soon.</p>
+		
+		<hr/>
+		
+		<p id="miscell" class="section"><a href="#miscell">Miscellaneous</a></p>
+		
+		<p><strong>Challenge 24</strong> &mdash; In 2004, I reached the semi-finals in a Challenge 24 competition. Challenge 24 is a fast-paced mental math 
+		game where the objective is to add, subtract, multiply, or divide four numbers to get 24. This must be done before three other players do the same, 
+		and the steps to the solution must be given within 15 seconds from touching the card.</p>
+
+	</div>
+{% endblock %}

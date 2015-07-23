@@ -1,0 +1,84 @@
+body {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	background-color: #500070;
+	color: #FFE100;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	color: lightgray;
+}
+.tabtable a, .listing a {
+	color: #FFE100;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+hr { border-color: gold; }
+
+.tabtable {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.tabtable td {
+	text-align: center;
+	font-size: 16pt;
+	font-weight: bold;
+	border-right: 1px solid gold;
+}
+.tabtable td:last-child {
+	border-right: 0px;
+}
+.tabtable td:hover {
+	background-color: #8000A0;
+}
+
+.listing {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	table-layout: fixed;
+	border-spacing: 10px 20px;
+}
+.listing td {
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.listing td a {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+.listing td:hover {
+	/* background-color: #8000A0; */
+	border: 1px solid gold;
+}
+.listing tr td:first-child {
+	font-size: 14pt; 
+	font-weight: bold;
+}
+.listing tr td:first-child a {
+	display: initial;
+	height: initial;
+	width: initial;
+}
+
+#content {
+	background-color: white;
+	color: black;
+	padding: 20px;
+}
+#content a {
+	color: #500070;
+}

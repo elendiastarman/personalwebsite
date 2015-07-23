@@ -1,0 +1,67 @@
+{% extends 'starmanite/headerfooter.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path %}<a href="{% url 'index:writing' %}">Writing</a>{% block path2 %}{% endblock %}{% endblock %}
+
+{% block writing %}WRITING{% endblock %}
+
+{% block main %}
+<table class="tabtable"><tr>
+	<td><a href="{% url 'index:stories' %}">Stories</a></td>
+	<td><a href="{% url 'index:blog' %}">Blog</a></td>
+	<td><a href="{% url 'index:academic' %}">Academic</a></td>
+</tr></table>
+
+<hr/>
+<br/>
+
+<table class="listing" style="border: 0px solid black;">
+	<tr>
+		<td><a href="{% url 'index:stories' %}">Stories</a></td>
+		<td><a href="{% url 'index:lumien-story' %}">
+			Lumien and the Seven Relics
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+		<td><a href="{% url 'index:figments' %}">
+			No Longer Figments of the Imagination
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+		<td><a href="{% url 'index:stories' %}">
+			More
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+	</tr>
+	<tr><td><p></p></td></tr>
+	<tr>
+		<td><a href="{% url 'index:blog' %}">Blog</a></td>
+		<td><a href="{% url 'index:theology' %}">
+			Christianity and Theology
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+		<td><a href="{% url 'index:thoughts' %}">
+			Thought Processes of My Mind
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+	</tr>
+	<tr><td><p></p></td></tr>
+	<tr>
+		<td><a href="{% url 'index:academic' %}">Academic</a></td>
+		<td><a href="{% url 'index:conceptweb' %}">
+			A Concept-Web Model of Language
+			<br/>
+			<img src="{% static 'placeholder_small.png' %}"/>
+		</a></td>
+	</tr>
+</table>
+
+<br/>
+<hr/>
+{% endblock %}

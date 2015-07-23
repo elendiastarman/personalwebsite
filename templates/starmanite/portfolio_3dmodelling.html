@@ -1,0 +1,27 @@
+{% extends 'starmanite/portfolio.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path2 %} > <a href="{% url 'index:3dmodelling' %}">3D Modelling</a>{% block path3 %}{% endblock %}{% endblock %}
+
+{% block model %}3D MODELLING{% endblock %}
+
+{% block content %}
+	<table class="listing" style="border: 0px solid black;">
+		<tr>
+			<td><a href="{% url 'index:blender' %}">Blender</a></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+		</tr>
+		<tr><td><p></p></td></tr>
+		<tr>
+			<td><a href="{% url 'index:maya' %}">Maya</a></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+			<td><img src="{% static 'placeholder_small.png' %}"/></td>
+		</tr>
+	</table>
+{% endblock %}

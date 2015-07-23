@@ -1,0 +1,25 @@
+{% extends 'starmanite/portfolio.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path2 %} > <a href="{% url 'index:mathematics' %}">Mathematics</a>{% block path3 %}{% endblock %}{% endblock %}
+
+{% block math %}MATHEMATICS{% endblock %}
+
+{% block content %}
+	<table class="listing" style="border: 0px solid black;">
+		<tr>
+			<td><a href="{% url 'index:math-rec' %}">Recreational</a></td>
+			<td><img src="{% static 'starmanite/math_rec_img1.png' %}"/></td>
+			<td><img src="{% static 'starmanite/CelticSquareKnot_example.png' %}"/></td>
+			<td><img src="{% static 'starmanite/hvzFormations.png' %}"/></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:math-classes' %}">Classes</a></td>
+			<td><img src="https://www.rit.edu/upub/logo-images/tiger_walking_rit.gif" height="125px"/></td>
+			<td><img src="http://img.printfection.com/14/480464/hwOYb.jpg"/></td>
+		</tr>
+	</table>
+{% endblock %}

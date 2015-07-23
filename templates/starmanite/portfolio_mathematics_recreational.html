@@ -1,0 +1,56 @@
+{% extends 'starmanite/portfolio_mathematics.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:math-rec' %}">Recreational</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<ul>
+			<li><a href="#history">History</a></li>
+			<li><a href="#sigmath">Significant Mathematical Works</a></li>
+			<li><a href="#freetime">Free Time Activities</a></li>
+		</ul>
+		
+		<hr/>
+		
+		<p id="history" class="section"><a href="#history">History</a></p>
+		
+		<ul>
+			<li><strong>2001-2004</strong> &mdash; In 3rd through 5th grade, I had one math teacher: Mr. Willis. He was heavily influential in instilling a passion for mathematics in me. He frequently made math <em>fun</em>, often with games. And so he is responsible in an indirect way for the rest of what you see here.</li>
+			
+			<li><strong>2007-2009</strong> &mdash; Indicative of my drive for more mathematical knowledge, I took both Algebra II and AP Statistics in 9th grade, and in 10th grade I took AP Calculus AB.</li>
+			
+			<li><strong>2009-2011</strong> &mdash; My junior and senior years, I attended the North Carolina School of Science and Mathematics, and the main reason that I applied in the first place was so that I could take more math classes. Otherwise, I would have run out at my home high school, where I went for freshman and sophomore years.</li>
+		</ul>
+		
+		<hr/>
+		
+		<p id="sigmath" class="section"><a href="#sigmath">Significant Mathematical Works</a></p>
+		
+		<p><strong>B&#233;zier Curve Self-Intersections</strong> &mdash; Frustrated by the apparent difficulty of a problem I wished to solve, and annoyed by the lack of usable solutions, I decided to come up with my own solution to the problem of finding self-intersections in B&#233;zier curves. I actually wrote a math paper documenting the solution, and currently I am working on a program to test that solution. That has lead me to find errors in my original solution, so I am updating the paper as I find them. As of yet, I have no examples to demonstrate, but once I finish the program, I will put them here. I may even put the paper here as well.</p>
+		
+		<p><strong>Humans Versus Zombies</strong> &mdash; For my final project in my Mathematical Modelling class, I chose to model the game of Humans Versus Zombies. Core to this was the investigation of the outcomes of ranged vs. melee battles. Lancaster's Laws only describe ranged vs. ranged battles or melee vs. melee battles. I created the initial battle simulation in Blitz 2D, but then ported it to Python in the interest of better number collection and statistical analysis. The overall model even had potential to become a publishable paper. Below is a snapshot of one frame in my iterative battle model. The blue dots are humans and the red dots are zombies.</p>
+		<img src="{% static 'starmanite/hvzFormations.png' %}" alt="HvZ formation example" />
+		
+		<hr/>
+		
+		<p id="freetime" class="section"><a href="#freetime">Free Time Activities</a></p>
+		
+		<p><strong>Playing with math</strong> is one of my favorite pastimes. Ever since I was young, I have found patterns and explored them, 
+		or asked myself a question out of curiosity and set out to answer it. For example, I asked myself a question on braiding and in the course 
+		of investigating the answer, I ended up in the field of matrix multiplication.</p>
+		
+		<p><strong>Celtic square knots</strong> are another mathematical object that I've played with. After I watched this YouTube video, <a href="https://www.youtube.com/watch?v=_O_0yegDdIw">Celtic Knot - 2</a>, I drew some of my own, and then figured out a way to piece them together from tiles, and produced a program to do that. Below is one of the examples.</p>
+		<img src="{% static 'starmanite/CelticSquareKnot_example.png' %}" alt="Celtic square knot example" />
+		
+		<p><strong>Project Euler</strong> is another way that I enjoy math. In fact, <a href="http://projecteuler.net/problem=196">Problem 196</a> (shown below) is one that I suggested, and was a direct result of my fondness for playing with math. At the moment, I have solved 112 problems.</p>
+		<a href="http://projecteuler.net/problem=196"><img src="{% static 'starmanite/PE196_snapshot.png' %}" alt="snapshot of the main feature of Project Euler problem 196" /></a>
+		
+		<p><strong>Also notable</strong> are that I correctly answered <a href="http://domino.research.ibm.com/Comm/wwwr_ponder.nsf/Challenges/November2013.html">IBM's November 2013 Ponder This challenge</a>, and that both significant mathematical works listed above are due to my proclivity for playing with math.</li>
+
+	</div>
+{% endblock %}

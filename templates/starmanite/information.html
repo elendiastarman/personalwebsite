@@ -1,0 +1,60 @@
+{% extends 'starmanite/headerfooter.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path %}<a href="{% url 'index:information' %}">Information</a>{% block path2 %}{% endblock %}{% endblock %}
+
+{% block information %}INFORMATION{% endblock %}
+
+{% block main %}
+	<table class="tabtable"><tr>
+		<td><a href="{% url 'index:about' %}">About</a></td>
+		<td><a href="{% url 'index:resume' %}">Resume</a></td>
+	</tr></table>
+
+	<hr/>
+	<br/>
+
+	{% block content %}
+		<table class="listing" style="border: 0px solid black;">
+			<tr>
+				<td><a href="{% url 'index:about' %}">About</a></td>
+				<td><a href="{% url 'index:contact' %}">
+					Contact
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></td>
+				<td><a href="{% url 'index:otherplaces' %}">
+					Where Else I Can Be Found
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></td>
+				<td></td>
+			</tr>
+			<tr><td><p></p></td></tr>
+			<tr>
+				<td><a href="{% url 'index:resume' %}">Resume</a></td>
+				<td><a href="{% url 'index:current' %}">
+					Current Resume
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></td>
+				<td><a href="{% url 'index:education' %}">
+					Education
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></td>
+				<td><a href="{% url 'index:jobs' %}">
+					Jobs
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></td>
+			</tr>
+		</table>
+	{% endblock %}
+
+	<br/>
+	<hr/>
+{% endblock %}

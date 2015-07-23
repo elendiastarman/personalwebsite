@@ -1,0 +1,73 @@
+{% extends 'starmanite/information_resume.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:education' %}">Education</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+		
+		<p id="academic" class="section"><a href="#academic">Academic Institutions</a></p>
+		
+		<p><strong>Northern Guilford High School</strong></p>
+		
+		<ul>
+			<li>2007-2008</li>
+			<li>2008-2009</li>
+		</ul>
+		
+		<p><strong>North Carolina School of Science and Mathematics</strong></p>
+		
+		<ul>
+			<li>2009-2010</li>
+			<li>2010-2011</li>
+		</ul>
+		
+		<p><strong>University of Washington</strong></p>
+		
+		<ul>
+			<li>2011, summer</li>
+			<li>2013, summer</li>
+		</ul>
+		
+		<p><strong>Rochester Institute of Technology</strong></p>
+		
+		<ul>
+			<li>2011-2012</li>
+			<li>2012-2013</li>
+			<li>2013-<em>present</em></li>
+		</ul>
+		
+		<!--<ul>
+			<li>Applied Mathematics, Rochester Institute of Technology, Rochester, NY, Sept 2011 &ndash; present</li>
+			<li>University of Washington, Seattle, WA, Jun &ndash; Aug 2013</li>
+			<li>University of Washington, Seattle, WA, Jun &ndash; Aug 2011</li>
+			<li>North Carolina School of Science and Mathematics, Durham, NC, Aug 2009 &ndash; Jun 2011</li>
+		</ul>-->
+		
+		<hr/>
+		
+		<p id="selfed" class="section"><a href="#selfed">Self-Education</a></p>
+		
+		<p><strong>Resources that I have used</strong> time and time again for my own self-education tend to be the following.</p>
+		
+		<ul>
+			<li>Project Euler</li>
+			<li>TED Talks</li>
+			<li>Khan Academy</li>
+			<li>Math Stack Exchange</li>
+			<li>YouTube:
+				<ul>
+					<li>Crash Course</li>
+					<li>Smarter Every Day</li>
+					<li>Numberphile</li>
+					<li>Veritasium</li>
+					<li>VSauce</li>
+				</ul>
+			</li>
+			<li>Wolfram|Alpha</li>
+		</ul>
+	</div>
+{% endblock %}

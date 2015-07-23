@@ -1,0 +1,15 @@
+{% extends 'starmanite/information_about.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:contact' %}">Contact</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<p>As of right now, the only way to contact me is through email: <a href="mailto:lee314b@gmail.com">lee314b@gmail.com</a></p>
+	
+	</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'starmanite/headerfooter.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path %}<a href="{% url 'index:portfolio' %}">Portfolio</a>{% block path2 %}{% endblock %}{% endblock %}
+
+{% block portfolio %}PORTFOLIO{% endblock %}
+
+{% block main %}
+	<table class="tabtable"><tr>
+		<td><a href="{% url 'index:mathematics' %}">{% block math %}Mathematics{% endblock %}</a></td>
+		<td><a href="{% url 'index:programming' %}">{% block prog %}Programming{% endblock %}</a></td>
+		<td><a href="{% url 'index:3dmodelling' %}">{% block model %}3D Modelling{% endblock %}</a></td>
+		<td><a href="{% url 'index:2dartwork' %}">{% block art %}2D Artwork{% endblock %}</a></td>
+		<td><a href="{% url 'index:triumphs' %}">{% block triumph %}Triumphs{% endblock %}</a></td>
+		<td><a href="{% url 'index:websites' %}">{% block webs %}Websites{% endblock %}</a></td>
+	</tr></table>
+
+	<hr/>
+	<br/>
+
+	{% block content %}
+	<table class="listing" style="border: 0px solid black;">
+		<tr>
+			<td><a href="{% url 'index:mathematics' %}">Mathematics</a></td>
+			<td><a href="{% url 'index:math-rec' %}">
+				Recreational
+				<br/>
+				<img src="{% static 'starmanite/CelticSquareKnot_example.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:math-classes' %}">
+				Classes
+				<br/><br/>
+				<img src="https://www.rit.edu/upub/logo-images/tiger_walking_rit.gif" height="125px"/>
+			</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:programming' %}">Programming</a></td>
+			<td><a href="{% url 'index:sigprogs' %}">
+				Significant Programs
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:prog-background' %}">
+				Programming Background
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:3dmodelling' %}">3D Modelling</a></td>
+			<td><a href="{% url 'index:blender' %}">
+				Blender
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:maya' %}">
+				Maya
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:2dartwork' %}">2D Artwork</a></td>
+			<td><a href="{% url 'index:doodles' %}">
+				Doodles
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:sprites' %}">
+				Sprite Comics
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:art-misc' %}">
+				Miscellaneous
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:triumphs' %}">Triumphs</a></td>
+			<td><a href="{% url 'index:creative' %}">
+				Creative
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:skill' %}">
+				Skill-based
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+		</tr>
+		<tr>
+			<td><a href="{% url 'index:websites' %}">Websites</a></td>
+			<td><a href="{% url 'index:starmaninnovations' %}">
+				Starman Innovations
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+			<td><a href="{% url 'index:diningcommons' %}">
+				Employee Scheduling<br/>(Dining Commons)
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}"/>
+			</a></td>
+		</tr>
+	</table>
+{% endblock %}
+
+	<br/>
+	<hr/>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'starmanite/portfolio_2dartwork.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:art-misc' %}">Miscellaneous</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<div id="minitoc" style="float: right; border: 1px solid #500070; margin: 0px; padding: 20px;">
+			<p style="margin-top: 0px;">Mini table of contents</p>
+			<ul style="list-style-type: none; text-align: right; margin-top: 0px; margin-bottom: 0px;">
+				<li><a href="{% url 'index:doodles' %}">Doodles</a></li>
+				<li><a href="{% url 'index:sprites' %}">Sprite Comics</a></li>
+				<li><strong>Miscellaneous</strong></li>
+			</ul>
+		</div>
+	
+		<p id="miscell" class="section"><a href="#miscell">Miscellaneous</a></p>
+		
+		<p><strong>2009</strong><br/>
+		<img src="{% static 'starmanite/2D examples/PPT_Background_Cells.jpg' %}" width="25%"/><br/>
+		<em>Created with Blender</em></p>
+		
+		<p><strong>2011</strong><br/>
+		<img src="{% static 'starmanite/2D examples/fibonacciWeb.png' %}" width="25%"/><br/>
+		<em>The Fibonacci sequence depicted in a radial pattern</em><br/><br/>
+		<img src="{% static 'starmanite/2D examples/HAKMEM123_1.png' %}" width="25%"/><br/>
+		<em>A visualization of a variant on <a href="http://www.inwap.com/pdp10/hbaker/hakmem/series.html#item123">HAKMEM 123</a></em></p>
+		
+		<p><strong>2013</strong><br/>
+		<img src="{% static 'starmanite/2D examples/color1.png' %}" width="25%"/><br/>
+		<em>The design I made in Blender for my then-friend's necklace charm</em></p>
+
+	</div>
+{% endblock %}

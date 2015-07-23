@@ -1,0 +1,123 @@
+{% extends 'starmanite/portfolio_programming.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:sigprogs' %}">Significant Programs</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<p id="sigprogs" class="section"><a href="sigprogs">Significant Programs</a></p>
+		
+		<ul>
+			<li><a href="#oldwestpong">Old West Pong</a> &ndash; Blitz 2D</li>
+			<li><a href="#martianchess">Martian Chess For 4</a> &ndash; Blitz 2D</li>
+			<li><a href="#fractalmania">Fractal Mania</a> &ndash; Blitz 2D</li>
+			<li><a href="#spacewars3d">SpaceWars3D</a> &ndash; Blitz 3D</li>
+			<li><a href="#blockdude">Block Dude</a> &ndash; Blitz 2D</li>
+			<li><a href="#mappingschool">Mapping the School</a> &ndash; Blitz 3D</li>
+			<li><a href="#pegssolver">Triangular Pegs Game Solver</a> &ndash; Python</li>
+			<li><a href="#portfoliowebsite">Portfolio Website</a> &ndash; HTML, CSS</li>
+			<li><a href="#lumienhedgehog">Lumien the Hedgehog</a> &ndash; Blitz 2D</li>
+			<li><a href="#arbychess">ArbyChess</a> &ndash; Blitz 2D</li>
+		</ul>
+		
+		<p id="oldwestpong"><a href="#oldwestpong"><strong>Old West Pong</strong></a> &ndash; <em>Blitz 2D</em><br/>
+		A good while ago, my family had a game called SuperPong95 (for Windows 95) on our computer. It had six modes, of which Old West Pong was
+		the most fun. Last year, I went looking for it online because I wanted to play it again. However, to my dismay, I couldn't find it anywhere.
+		I wasn't content to not play it though, so I decided to recreate it. The finished product can be found here on SourceForge:
+		<a href="https://sourceforge.net/projects/oldwestpong/">Old West Pong</a>
+		<br/><br/>
+		Here is a YouTube video that shows a time-lapse of me writing and testing the code for the game. <br/>
+		<object data="http://www.youtube.com/embed/NHnQbJ8a8zA" width="560" height="315">
+			<param name="frameborder" value="0"/>
+			<param name="allowfullscreen" value="true"/>
+			There should be a YouTube video embedded here. Here's the <a href="http://www.youtube.com/embed/NHnQbJ8a8zA">link</a>.
+		</object>
+		</p>
+		
+		<p id="martianchess"><a href="#martianchess"><strong>Martian Chess For 4</strong></a> &ndash; <em>Blitz 2D</em><br/>
+		I was introduced to Martian Chess several years ago, and while it uses a chessboard and has the word "Chess" in its name, it is very little
+		like regular chess. The board game itself was developed by Icehouse Games, and <a href="http://en.wikipedia.org/wiki/Martian_chess">here</a>
+		is a page describing the rules. I actually programmed my computer game before I knew of this, so drones are able to move diagonally as well.
+		This is the other of my projects that I've put on SourceForge, and <a href="https://sourceforge.net/projects/matianchessfor4/?source=directory">
+		here</a> is the link. Plus a screenshot. <br/>
+		<img src="{% static 'starmanite/martianChess4Four_screenshot.png' %}" width="364" height="229" alt="Martian Chess For 4 screenshot"/>
+		</p>
+		
+		<p id="fractalmania"><a href="#fractalmania"><strong>Fractal Mania</strong></a> &ndash; <em>Blitz 2D</em><br/>
+		Originally called Fractal Productions, this was my first major programming project in 2D. The way it generated fractals was by use of 
+		<a href="http://en.wikipedia.org/wiki/Lindenmeyer_system">Lindenmeyer systems</a>. Below is a screenshot of the twelveth iteration in the
+		Dragon Curve fractal. Almost every possible Lindenmeyer system fractal is possible in this program. <br/>
+		<img src="{% static 'starmanite/fractalMania_screenshot.png' %}" alt="Fractal Mania screenshot"/>
+		</p>
+		
+		<p id="spacewars3d"><a href="#spacewars3d"><strong>SpaceWars3D</strong></a> &ndash; <em>Blitz 3D</em><br/>
+		This was my first major programming project in 3D. I was inspired by the game <a href="http://www.zektor.com/zvg/images/bwpics/large/spacewar.gif">
+		SpaceWar!</a> and decided to make a 3D spaceship shooter game. By my standards today, it's okay, but not great. However, keep in mind that I 
+		programmed this within two years of learning how to program, and that was six years ago. Here is a screenshot: <br/>
+		<img src="{% static 'starmanite/spacewars3D_screenshot.png' %}" width="512" height="384" alt="SpaceWars3D screenshot"/>
+		</p>
+		
+		<p id="blockdude"><a href="#blockdude"><strong>Block Dude</strong></a> &ndash; <em>Blitz 2D</em><br/>
+		This was another computer game inspired by a game that I loved to play. This time, I reverse-engineered the popular TI-84 calculator game
+		<a href="http://azich.org/blockdude/">Block Dude</a> in the span of a single day. My version has different (and more sensible) movement rules,
+		and at the moment only has a few small maps. However, given the time and inclination, I could reproduce all of the maps from the original. Here's
+		a screenshot: <br/>
+		<img src="{% static 'starmanite/blockdude_screenshot.png' %}" alt="Block Dude screenshot"/>
+		</p>
+		
+		<p id="mappingschool"><a href="#mappingschool"><strong>Mapping the School</strong></a> &ndash; <em>Blitz 3D</em><br/>
+		My high school (NCSSM) split its year into trimesters, with a so-called "miniterm" in between the winter and spring trimesters that lasted for 10
+		days. Students could do just about anything they wanted as long as it involved learning something non-trivial. Senior year, I chose to do this
+		project. I envisioned creating something like Google Maps, but 3D and for the school campus. Over the span of 3 days, I wrote about 18 kB of code
+		that allowed me to create a node network where I could create new nodes, link them together, move them around, and so on. Furthermore, it also has
+		lists of rooms on the side that can be scrolled through to select rooms, and the shortest path is highlighted in yellow. Here are two screenshots
+		below: <br/>
+		<img src="{% static 'starmanite/mappingTheSchool_screenshot1.jpg' %}" alt="Mapping the School screenshot 1"/>
+		<img src="{% static 'starmanite/mappingTheSchool_screenshot2.jpg' %}" alt="Mapping the School screenshot 2"/>
+		</p>
+		
+		<p id="pegssolver"><a href="#pegssolver"><strong>Triangular Pegs Game Solver</strong></a> &ndash; <em>Python</em><br/>
+		This one is probably among the most advanced and significant of my Python programs. I have included it here mainly to show that I <em>do</em>
+		have significant Python experience. The IDE I use for Blitz 2D/3D is simply much more conducive to large projects, which is why almost all of
+		these projects are in that language. That said, this one demonstrates what I now know to be knowledge of the basics of artificial intelligence.
+		In Pegs-type games, the only move is to jump one peg over another in a straight line, removing the one that was jumped over. It is often seen at
+		places like Cracker Barrel and other establishments that have old, old board games. My program was focused on the triangular version (pictured
+		below), and I wrote it in order to find a solution path that would place the final peg smack dab in the middle. As it turned out, my many failed
+		attempts at finding that solution myself were not actually failures, because there <em>wasn't</em> such a solution. There was, however, a solution
+		for placing the final peg in the middle of the bottom side, and my program found two paths which were mirrors of each other.
+		<br/><br/>
+		The triangular Pegs game as seen in Cracker Barrel stores: <br/>
+		<a href="http://www.pegsgame.com/types-of-pegs-game/cracker-barrel-peg-game.html">
+			<img src="http://www.pegsgame.com/images/cracker-barrel-peg-game.jpg" alt="Triangle Pegs game"/>
+		</a>
+		</p>
+		
+		<p id="portfoliowebsite"><a href="#portfoliowebsite"><strong>Portfolio Website</strong></a> &ndash; <em>HTML, CSS</em><br/>
+		This very own website is an example of my web programming skills, using Django as the framework. Naturally, I use HTML, CSS, and JavaScript. Later on, as I add features and sections, I may use other technologies. 
+		</p>
+		
+		<p id="lumienhedgehog"><a href="#lumienhedgehog">Lumien the Hedgehog</a> &ndash; <em>Blitz 2D</em><br/>
+		This one is currently in progress and when finished, will likely be among my top largest projects ever. This is another instance of 
+		reverse-engineering a game I loved, and this time, it's the old 2D-platformer Sonic the Hedgehog games. At the moment, I have a terrain creation
+		program, a separate program for the special stage (which is based off of Sonic 3's special stage), and the very beginnings of the actual
+		running-the-game program.
+		</p>
+		
+		<p id="arbychess"><a href="#arbychess">ArbyChess</a> &ndash; <em>Blitz 2D</em><br/>
+		In the process of starting this program, my method diverged greatly from the others as I started with code written down on a whiteboard.</p>
+		
+		<img src="{% static 'starmanite/Picture0051.JPG' %}" width="25%"/>
+		
+		<p>I then spent quite a lot of time thinking through how I was going to program it so as to reduce the number of times I get stuck and frustrated while writing the	program itself.</p>
+		
+		<img src="{% static 'starmanite/Picture0052.JPG' %}" width="25%"/>
+		
+		<p>The end product will be a chess engine with the goal of allowing very customizable boards and pieces. For instance, this engine will allow the board to wrap around horizontally, or for each side to connect to the one clockwise from it, or a great many other configurations. At the time of writing, it is very close to being able to play a full game of chess. At the moment, in addition to traditional chess, it can run <a href="http://highered.mcgraw-hill.com/sites/dl/free/0072399090/66062/Lab_11_11.pdf">Hex-a-Pawn</a> and hexagonal chess (specifically, <a href="https://en.wikipedia.org/wiki/Hexagonal_chess#Gli.C5.84ski.27s_hexagonal_chess">Gli&nacute;ski's variant</a>). The first and third are shown below. For more details, click <a href="arbychess.html">here</a>.</p>
+		
+		<img src="{% static 'starmanite/arbychess_screenshot.png' %}" alt="ArbyChess normal chess" />
+		<img src="{% static 'starmanite/arbychessHexagonalChess_screenshot.png' %}" alt="ArbyChess hexagonal chess" height="170px" />
+	</div>
+{% endblock %}
