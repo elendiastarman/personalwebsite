@@ -27,10 +27,10 @@ hr { border-color: gold; }
 	margin-right: auto;
 	border-collapse: collapse;
 	table-layout: fixed;
+	font-size: 2vw;
 }
 .tabtable td {
 	text-align: center;
-	font-size: 16pt;
 	font-weight: bold;
 	border-right: 1px solid gold;
 }
@@ -54,6 +54,7 @@ hr { border-color: gold; }
 	border: 1px solid transparent;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-size: 1.6vw;
 }
 .listing td a {
 	display: inline-block;
@@ -61,17 +62,20 @@ hr { border-color: gold; }
 	width: 100%;
 }
 .listing td:hover {
-	/* background-color: #8000A0; */
 	border: 1px solid gold;
 }
 .listing tr td:first-child {
-	font-size: 14pt; 
+	/* font-size: 14pt;  */
+	font-size: 1.8vw;
 	font-weight: bold;
 }
 .listing tr td:first-child a {
 	display: initial;
 	height: initial;
 	width: initial;
+}
+.listing img {
+	max-width: 100%;
 }
 
 #content {
