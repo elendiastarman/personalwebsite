@@ -27,7 +27,7 @@ hr { border-color: gold; }
 	margin-right: auto;
 	border-collapse: collapse;
 	table-layout: fixed;
-	font-size: 2vw;
+	font-size: 1.8vw;
 }
 .tabtable td {
 	text-align: center;
