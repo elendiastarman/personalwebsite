@@ -20,6 +20,14 @@
 
 <table class="listing" style="border: 0px solid black;">
 	<tr>
+		<td><a href="{% url 'index:blog' %}">Blog</a></td>
+		<td><a href="http://www.starmaninnovations.com/blog/category/hyperbolic-geometry/">
+			Hyperbolic Geometry
+			<br/>
+			<img src="{% static 'starmanite/hyperbolicGeometry_grid_thumbnail.png' %}" />
+		</a></td>
+	</tr>
+	<tr>
 		<td><a href="{% url 'index:stories' %}">Stories</a></td>
 		<td><a href="{% url 'index:lumien-story' %}">
 			Lumien and the Seven Relics
@@ -31,14 +39,7 @@
 			<br/>
 			<img src="{% static 'placeholder_small.png' %}"/>
 		</a></td>
-	</tr>
-	<tr>
-		<td><a href="{% url 'index:blog' %}">Blog</a></td>
-		<td><a href="http://www.starmaninnovations.com/blog/category/hyperbolic-geometry/">
-			Hyperbolic Geometry
-			<br/>
-			<img src="{% static 'starmanite/hyperbolic_grid_thumbnail.png' %}" width="125px"/>
-		</a></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><a href="{% url 'index:academic' %}">Academic</a></td>
