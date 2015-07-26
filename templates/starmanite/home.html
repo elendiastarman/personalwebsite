@@ -12,10 +12,12 @@
 	</head>
 	
 	<body>
-		<a href="{% url 'index:home' %}">
-			<img src="{% static 'starmanite/StarmanInnovations_logo2_large.png' %}"
-					 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
-		</a>
+		<div id="logo">
+			<a href="{% url 'index:home' %}">
+				<img src="{% static 'starmanite/StarmanInnovations_logo2_large.png' %}"
+						 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
+			</a>
+		</div>
 
 		<table>
 			<tr onclick="window.location.href='{% url 'index:products' %}'">
