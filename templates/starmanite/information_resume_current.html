@@ -2,12 +2,13 @@
 
 {% block stylingAndScripts %}
 		<style>
-			.paper { background-color: white; color: black; font-family: "Times New Roman", Times, serif; }
+			.paper { background-color: white; color: black; font-family: "Arial", Arial, san-serif; }
 			.paper a { color: black; }
-			h3 { font-weight: normal; }
+			h3 { font-weight: bold; margin-bottom: 0px;}
+			ul { margin-top: 0px; }
 			.experience { border: 1px solid black; width: 100%; border-collapse: collapse; }
 			.experience td, th { border-left: 1px solid black; width: 33%; }
-			.experience th { border-bottom: 1px solid black; }
+			.experience th { border-bottom: 1px solid black; text-align: left; }
 		</style>
 {% endblock %}
 
@@ -15,45 +16,81 @@
 
 {% block content %}
 	<div class="paper" style="width: 670px; margin-left: auto; margin-right: auto; border: 1px solid black; padding: 80px;">
-		<h2 style="margin-top: 0px;">Lee Burnette</h2>
+		<h1 style="margin-top: 0px; margin-bottom: 0px;">Lee Burnette</h1>
+		
+		{% url 'index:portfolio' as portfolio_url %}
+		<p style="margin-top: 0px;">lee314b@gmail.com &bull; 336-402-9536 (texting only) &bull; 2605 Erst Ct, Louisville, KY 40220 <br/>
+		Portfolio: <a href="{{ portfolio_url }}">http://{{ request.get_host }}{{ portfolio_url }}</a></p>
 
-		<table style="width: 100%;">
+		<p><em>I am very good at problem solving, a skill that is fueled by my vast knowledge base and my voracious appetite for learning about all sorts of things, as well as an innate ability to pick out patterns and understand complex concepts. I also constantly create new products and enjoy helping other people.</em></p>
+
+		<h3>WORK EXPERIENCE</h3>
+		<ul>
+			<li>Python class Teacher's Assistant, Summer Academy for Advancing Deaf and Hard of Hearing Students in Fields of Computing, Seattle, WA, Summer 2013</li>
+			<li>Software developer, RIT Research Experience for Undergraduates, Summer 2014</li>
+			<li>RIT Dining Commons Student Employee, Feb 7, 2014 – May 21, 2015</li>
+		</ul>
+		
+		<h3>EDUCATION</h3>
+		<ul>
+			<li><strong>Bachelor of Science in Applied Mathematics</strong>, Rochester Institute of Technology, Rochester, NY (May 2015)</li>
+			<li>Web Development and Introduction to Algorithms, University of Washington—Seattle, summers 2011 & 2013</li>
+		</ul>
+		
+		<h3>PORTFOLIO HIGHLIGHTS</h3>
+		<ul>
+			<li>Learned Django and then built an employee scheduling website from scratch in 3 months</li>
+			<li>Using Python, designed and developed a program intended to help eye-tracking experts analyze eye tracking data</li>
+			<li>Using Blitz 2D/3D, programmed four complete games since 2006: SpaceWars3D, Martian Chess For 4, Old West Pong, Block Dude. Two more in progress: Lumien the Hedgehog, ArbyChess</li>
+			<li>Using Maya, created a two-minute short film with 3 other people in summer of 2011</li>
+			<li>Modelled a piano within 2 months of learning Maya</li>
+		</ul>
+
+		<h3>PROGRAMMING SKILLS</h3>
+		<table class="experience">
 			<tr>
-				<td>Email: lee314b@gmail.com</td>
-				<td style="text-align: right;">272-4 Colony Manor Dr</td>
+				<th>Expert</th>
+				<th>Intermediate</th>
+				<th>Basic</th>
 			</tr>
 			<tr>
-				<td>Phone: 336-402-9534 (text only)</td>
-				<td style="text-align: right;">Rochester, NY 14623</td>
+				<td>Python</td>
+				<td>Javascript</td>
+				<td>Ajax</td>
 			</tr>
-			{% url 'index:portfolio' as portfolio_url %}
-			<tr><td>Portfolio: <a href="{{ portfolio_url }}">http://{{ request.get_host }}{{ portfolio_url }}</a></td></tr>
+			<tr>
+				<td>Blitz 2D/3D</td>
+				<td>Lua</td>
+				<td>MySQL</td>
+			</tr>
+			<tr>
+				<td>Django</td>
+				<td>Java</td>
+				<td>PHP</td>
+			</tr>
+			<tr>
+				<td>HTML</td>
+				<td>Ruby</td>
+				<td>MIPS Assembly</td>
+			</tr>
+			<tr>
+				<td>CSS</td>
+				<td></td>
+				<td>C/C++</td>
+			</tr>
+			<tr>
+				<td>LaTeX</td>
+				<td></td>
+				<td>Prolog</td>
+			</tr>
+			<tr>
+				<td>TI-BASIC</td>
+				<td></td>
+				<td>jQuery</td>
+			</tr>
 		</table>
 
-		<h3 style="text-align: justify;"><strong>I have a constant hunger for solving challenging problems and I am always learning. 
-		I am inspired by Creation to create things that I and others enjoy. 
-		I also have a heart-felt desire to help people, especially those less lucky than I.</strong></h3>
-
-		<h3><strong>This is why I do what I do.</strong></h3>
-
-		<h3>CHALLENGING PROBLEMS and KNOWLEDGE ACQUISITION</h3>
-
-		<p style="margin-bottom: 0px;"><strong>Academia</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Applied Mathematics, Rochester Institute of Technology, Rochester, NY, Sept 2011 – present</li>
-			<li>University of Washington, Seattle, WA, Jun – Aug 2011; Jun – Aug 2013</li>
-			<li>North Carolina School of Science and Mathematics, Durham, NC, Aug 2009 – Jun 2011</li>
-		</ul>
-
-		<p style="margin-bottom: 0px;"><strong>Self Education</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Self-taught programmer since 2005</li>
-			<li>112 Project Euler problems solved</li>
-			<li>Voracious consumer of online educational material</li>
-			<li>Currently working through an MIT open online course – Engineering Dynamics – in a quest to understand the physics of a spinning top</li>
-		</ul>
-
-		<p style="margin-bottom: 0px; text-align: center;"><strong>Mathematics Classes</strong></p>
+		<h3>MATHEMATICS EXPERTISE</h3>
 		<table class="experience">
 			<tr>
 				<th>Discrete</th>
@@ -96,96 +133,6 @@
 				<td></td>
 			</tr>
 		</table>
-
-		<p style="margin-bottom: 0px; text-align: center;"><strong>Programming Skill</strong></p>
-		<table class="experience">
-			<tr>
-				<th>Expert</th>
-				<th>Intermediate</th>
-				<th>Basic</th>
-			</tr>
-			<tr>
-				<td>Python</td>
-				<td>Javascript</td>
-				<td>Ajax</td>
-			</tr>
-			<tr>
-				<td>Blitz 2D/3D</td>
-				<td>Lua</td>
-				<td>MySQL</td>
-			</tr>
-			<tr>
-				<td>Django</td>
-				<td>Java</td>
-				<td>PHP</td>
-			</tr>
-			<tr>
-				<td>HTML</td>
-				<td>Ruby</td>
-				<td>MIPS Assembly</td>
-			</tr>
-			<tr>
-				<td>CSS</td>
-				<td></td>
-				<td>C/C++</td>
-			</tr>
-			<tr>
-				<td>LaTeX</td>
-				<td></td>
-				<td>Prolog</td>
-			</tr>
-			<tr>
-				<td>TI-BASIC</td>
-				<td></td>
-				<td>jQuery</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		
-		<h3>CREATIVE WORKS</h3>
-
-		<p style="margin-bottom: 0px;"><strong>Programming</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Learned Django and then built an employee scheduling website from scratch in 3 months</li>
-			<li>Using Python, designed and developed a program intended to help eye-tracking experts analyze eye tracking data</li>
-			<li>Using Blitz 2D/3D, programmed four complete games since 2006: SpaceWars3D, Martian Chess For 4, Old West Pong, Block Dude. Two more in progress: Lumien the Hedgehog, ArbyChess.</li>
-		</ul>
-
-		<p style="margin-bottom: 0px;"><strong>Writing</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>140,000+ words and counting in Lumien and the Seven Relics, my novel in progress</li>
-			<li>Wrote 50,547 words during November 2012 and 50,049 words during November 2014 for National Novel Writing Month – NaNoWriMo.</li>
-			<li>Wrote and presented a philosophy paper on the subject of language at RIT's 5th annual Undergraduate Philosophy Conference</li>
-		</ul>
-
-		<p style="margin-bottom: 0px;"><strong>3D Modelling</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Self-taught user of Blender since 2008</li>
-			{% url 'index:blender' as blender_url %}
-			<li>Blender portfolio: <a href="{{ blender_url }}">http://{{ request.get_host }}{{ blender_url }}</a></li>
-			<li>Using Maya, created a two-minute short film with 3 other people in summer of 2011</li>
-			<li>Modeled a piano within 2 months of learning Maya</li>
-		</ul>
-
-		<h3>SERVING PEOPLE</h3>
-
-		<p style="margin-bottom: 0px;"><strong>Work Experience</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Python class TA, Summer Academy for Advancing Deaf and Hard of Hearing Students in Fields of Computing, Jun 20 – Aug 23, 2013</li>
-			<li>Software developer, RIT Research Experience for Undergraduates, Jun 8 – Aug 12, 2014</li>
-			<li>Dining Commons Student Employee, Feb 7, 2014 – present</li>
-		</ul>
-
-		<p style="margin-bottom: 0px;"><strong>Volunteer Activities</strong></p>
-		<ul style="margin-top: 0px;">
-			<li>Secretary/Treasurer for Brothers And Sisters In Christ, 2012-2014.</li>
-			<li>Pro-Tempore and elected moderator for the Christianity StackExchange site, 2011-present.</li>
-			<li>Occasional activities to serve the homeless</li>
-		</ul>
 		
 	</div>
 {% endblock %}
