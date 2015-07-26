@@ -2,12 +2,13 @@
 
 {% block stylingAndScripts %}
 		<style>
-			.paper { background-color: white; color: black; font-family: "Times New Roman", Times, serif; }
+			.paper { background-color: white; color: black; font-family: "Arial", Arial, san-serif; }
 			.paper a { color: black; }
-			h3 { font-weight: normal; }
+			h3 { font-weight: bold; margin-bottom: 0px;}
+			ul { margin-top: 0px; }
 			.experience { border: 1px solid black; width: 100%; border-collapse: collapse; }
 			.experience td, th { border-left: 1px solid black; width: 33%; }
-			.experience th { border-bottom: 1px solid black; }
+			.experience th { border-bottom: 1px solid black; text-align: left; }
 		</style>
 {% endblock %}
 
@@ -15,27 +16,28 @@
 
 {% block content %}
 	<div class="paper" style="width: 670px; margin-left: auto; margin-right: auto; border: 1px solid black; padding: 80px;">
-		<h1 style="margin-top: 0px;">Lee Burnette</h1>
+		<h1 style="margin-top: 0px; margin-bottom: 0px;">Lee Burnette</h1>
 		
-		<p>lee314b@gmail.com &bull; 336-402-9536 (texting only) &bull; 2605 Erst Ct, Louisville, KY 40220 <br/>
-		Portfolio: {% url 'index:portfolio' %}</p>
+		{% url 'index:portfolio' as portfolio_url %}
+		<p style="margin-top: 0px;">lee314b@gmail.com &bull; 336-402-9536 (texting only) &bull; 2605 Erst Ct, Louisville, KY 40220 <br/>
+		Portfolio: <a href="{{ portfolio_url }}">http://{{ request.get_host }}{{ portfolio_url }}</a></p>
 
 		<p><em>I am very good at problem solving, a skill that is fueled by my vast knowledge base and my voracious appetite for learning about all sorts of things, as well as an innate ability to pick out patterns and understand complex concepts. I also constantly create new products and enjoy helping other people.</em></p>
 
-		<h2>WORK EXPERIENCE</h2>
+		<h3>WORK EXPERIENCE</h3>
 		<ul>
 			<li>Python class Teacher's Assistant, Summer Academy for Advancing Deaf and Hard of Hearing Students in Fields of Computing, Seattle, WA, Summer 2013</li>
 			<li>Software developer, RIT Research Experience for Undergraduates, Summer 2014</li>
 			<li>RIT Dining Commons Student Employee, Feb 7, 2014 – May 21, 2015</li>
 		</ul>
 		
-		<h2>EDUCATION</h2>
+		<h3>EDUCATION</h3>
 		<ul>
 			<li><strong>Bachelor of Science in Applied Mathematics</strong>, Rochester Institute of Technology, Rochester, NY (May 2015)</li>
 			<li>Web Development and Introduction to Algorithms, University of Washington—Seattle, summers 2011 & 2013</li>
 		</ul>
 		
-		<h2>PORTFOLIO HIGHLIGHTS</h2>
+		<h3>PORTFOLIO HIGHLIGHTS</h3>
 		<ul>
 			<li>Learned Django and then built an employee scheduling website from scratch in 3 months</li>
 			<li>Using Python, designed and developed a program intended to help eye-tracking experts analyze eye tracking data</li>
@@ -44,7 +46,7 @@
 			<li>Modelled a piano within 2 months of learning Maya</li>
 		</ul>
 
-		<h2>PROGRAMMING SKILLS</h2>
+		<h3>PROGRAMMING SKILLS</h3>
 		<table class="experience">
 			<tr>
 				<th>Expert</th>
@@ -88,7 +90,7 @@
 			</tr>
 		</table>
 
-		<h2>MATHEMATICS EXPERTISE</h2>
+		<h3>MATHEMATICS EXPERTISE</h3>
 		<table class="experience">
 			<tr>
 				<th>Discrete</th>
