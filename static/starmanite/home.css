@@ -9,12 +9,12 @@ body {
 	font-family: Arial, sans-serif;
 }
 #logo {
-	width: 111%;
-	margin-left: -5.5%;
-	background-image: -webkit-linear-gradient(to right, black 25%, #500070, red, green, gray, cyan, blue, #FFE100, black 75%);
-	background-image: -o-linear-gradient(to right, black 25%, #500070, red, green, gray, cyan, blue, #FFE100, black 75%);
-	background-image: -moz-linear-gradient(to right, black 25%, #500070, red, green, gray, cyan, blue, #FFE100, black 75%);
-	background-image: linear-gradient(to right, black 25%, #500070, red, green, gray, cyan, blue, #FFE100, black 75%);
+	width: 112%;
+	margin-left: -6%;
+	background-image: -webkit-linear-gradient(to right, black 25%, #500070, #0B00E7, #135F00, #9E9E9E, #00E7E4, #EE0000, #E9D500, black 75%);
+	background-image: -o-linear-gradient(to right, black 25%, #500070, #0B00E7, #135F00, #9E9E9E, #00E7E4, #EE0000, #E9D500, black 75%);
+	background-image: -moz-linear-gradient(to right, black 25%, #500070, #0B00E7, #135F00, #9E9E9E, #00E7E4, #EE0000, #E9D500, black 75%);
+	background-image: linear-gradient(to right, black 25%, #500070, #0B00E7, #135F00, #9E9E9E, #00E7E4, #EE0000, #E9D500, black 75%);
 	padding-bottom: 10px;
 }
 
