@@ -75,7 +75,6 @@ hr { border-color: gold; }
 	border: 1px solid gold;
 }
 .listing tr td:first-child {
-	/* font-size: 14pt;  */
 	font-size: 1.6vw;
 	font-weight: bold;
 }
