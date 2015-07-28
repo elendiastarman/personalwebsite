@@ -37,27 +37,7 @@
 				</td>
 			</tr>
 			
-			<tr onclick="window.location.href='{% url 'index:writing' %}'">
-				<td>
-					<h2>Writing</h2>
-					<p>Things I wrote!</p>
-				</td>
-				<td>
-					<ul class="subcategories">
-						<li>Blog</li>
-						<li>Stories</li>
-						<li>Academic</li>
-					</ul>
-				</td>
-				<td>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-				</td>
-			</tr>
-			
 			<tr onclick="window.location.href='{% url 'index:portfolio' %}'">
-				<td>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-				</td>
 				<td>
 					<h2>Portfolio</h2>
 					<p>Things I made!</p>
@@ -70,6 +50,26 @@
 						<li>2D Artwork</li>
 						<li>Triumphs</li>
 						<li>Websites</li>
+					</ul>
+				</td>
+				<td>
+					<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
+				</td>
+			</tr>
+			
+			<tr onclick="window.location.href='{% url 'index:writing' %}'">
+				<td>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</td>
+				<td>
+					<h2>Writing</h2>
+					<p>Things I wrote!</p>
+				</td>
+				<td>
+					<ul class="subcategories">
+						<li>Blog</li>
+						<li>Stories</li>
+						<li>Academic</li>
 					</ul>
 				</td>
 			</tr>
