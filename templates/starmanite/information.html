@@ -9,47 +9,34 @@
 {% block information %}INFORMATION{% endblock %}
 
 {% block main %}
-	<table class="tabtable"><tr>
+<!-- 	<table class="tabtable"><tr>
 		<td><a href="{% url 'index:about' %}">About</a></td>
 		<td><a href="{% url 'index:resume' %}">Resume</a></td>
 	</tr></table>
 
 	<hr/>
-	<br/>
+	<br/> -->
 
 	{% block content %}
 		<table class="listing" style="border: 0px solid black;">
 			<tr>
-				<td><a href="{% url 'index:about' %}">About</a></td>
+				<td>About</td>
 				<td><a href="{% url 'index:contact' %}">
 					Contact
 					<br/>
-					<img src="{% static 'placeholder_small.png' %}"/>
+					<img src="{% static 'starmanite/atSymbol.png' %}"/>
 				</a></td>
-				<td><a href="{% url 'index:otherplaces' %}">
-					Where Else I Can Be Found
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}"/>
-				</a></td>
-				<td></td>
-			</tr>
-			<tr><td><p></p></td></tr>
-			<tr>
-				<td><a href="{% url 'index:resume' %}">Resume</a></td>
 				<td><a href="{% url 'index:current' %}">
 					Current Resume
 					<br/>
-					<img src="{% static 'placeholder_small.png' %}"/>
-				</a></td>
-				<td><a href="{% url 'index:education' %}">
-					Education
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}"/>
-				</a></td>
-				<td><a href="{% url 'index:jobs' %}">
-					Jobs
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}"/>
+					<!-- <img src="{% static 'starmanite/resumeImage.png' %}"/> -->
+					<ul style="text-align: left;">
+						<li>Work experience</li>
+						<li>Education</li>
+						<li>Portfolio highlights</li>
+						<li>Programming skills</li>
+						<li>Mathematics expertise</li>
+					</ul>
 				</a></td>
 			</tr>
 		</table>
