@@ -9,14 +9,14 @@
 {% block portfolio %}PORTFOLIO{% endblock %}
 
 {% block main %}
-	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:mathematics' %}">{% block math %}Mathematics{% endblock %}</a></td>
-		<td><a href="{% url 'index:programming' %}">{% block prog %}Programming{% endblock %}</a></td>
-		<td><a href="{% url 'index:3dmodelling' %}">{% block model %}3D Modelling{% endblock %}</a></td>
-		<td><a href="{% url 'index:2dartwork' %}">{% block art %}2D Artwork{% endblock %}</a></td>
-		<td><a href="{% url 'index:triumphs' %}">{% block triumph %}Triumphs{% endblock %}</a></td>
-		<td><a href="{% url 'index:websites' %}">{% block webs %}Websites{% endblock %}</a></td>
-	</tr></table>
+	<ul class="tabs">
+		<li><a href="{% url 'index:mathematics' %}">{% block math %}Mathematics{% endblock %}</a></li>
+		<li><a href="{% url 'index:programming' %}">{% block prog %}Programming{% endblock %}</a></li>
+		<li><a href="{% url 'index:3dmodelling' %}">{% block model %}3D Modelling{% endblock %}</a></li>
+		<li><a href="{% url 'index:2dartwork' %}">{% block art %}2D Artwork{% endblock %}</a></li>
+		<li><a href="{% url 'index:triumphs' %}">{% block triumph %}Triumphs{% endblock %}</a></li>
+		<li><a href="{% url 'index:websites' %}">{% block webs %}Websites{% endblock %}</a></li>
+	</ul>
 
 	<hr/>
 	<br/>
