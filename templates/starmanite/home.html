@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//Dli XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/Dli/xhtml11.dli">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -19,80 +19,88 @@
 			</a>
 		</div>
 
-		<table>
-			<tr onclick="window.location.href='{% url 'index:products' %}'">
-				<td>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-				</td>
-				<td>
-					<h2>Products</h2>
-					<p>Things for sale!</p>
-				</td>
-				<td>
-					<ul class="subcategories">
-						<li>Programs</li>
-						<li>3D Printing</li>
-						<li>Commissions</li>
-					</ul>
-				</td>
-			</tr>
+		<ul class="category-list">
+			<li onclick="window.location.href='{% url 'index:products' %}'">
+				<ul class="category">
+					<li>
+						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					</li>
+					<li>
+						<h2>Products</h2>
+						<p>Things for sale!</p>
+					</li>
+					<li>
+						<ul class="subcategories">
+							<li>Programs</li>
+							<li>3D Printing</li>
+							<li>Commissions</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
 			
-			<tr onclick="window.location.href='{% url 'index:portfolio' %}'">
-				<td>
-					<h2>Portfolio</h2>
-					<p>Things I made!</p>
-				</td>
-				<td>
-					<ul class="subcategory">
-						<li>Mathematics</li>
-						<li>Programming</li>
-						<li>3D Modelling</li>
-						<li>2D Artwork</li>
-						<li>Triumphs</li>
-						<li>Websites</li>
-					</ul>
-				</td>
-				<td>
-					<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
-				</td>
-			</tr>
+			<li onclick="window.location.href='{% url 'index:portfolio' %}'">
+				<ul class="category">
+					<li>
+						<h2>Portfolio</h2>
+						<p>Things I made!</p>
+					</li>
+					<li>
+						<ul class="subcategory">
+							<li>Mathematics</li>
+							<li>Programming</li>
+							<li>3D Modelling</li>
+							<li>2D Artwork</li>
+							<li>Triumphs</li>
+							<li>Websites</li>
+						</ul>
+					</li>
+					<li>
+						<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
+					</li>
+				</ul>
+			</li>
 			
-			<tr onclick="window.location.href='{% url 'index:writing' %}'">
-				<td>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-				</td>
-				<td>
-					<h2>Writing</h2>
-					<p>Things I wrote!</p>
-				</td>
-				<td>
-					<ul class="subcategories">
-						<li>Blog</li>
-						<li>Stories</li>
-						<li>Academic</li>
-					</ul>
-				</td>
-			</tr>
+			<li onclick="window.location.href='{% url 'index:writing' %}'">
+				<ul class="category">
+					<li>
+						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					</li>
+					<li>
+						<h2>Writing</h2>
+						<p>Things I wrote!</p>
+					</li>
+					<li>
+						<ul class="subcategories">
+							<li>Blog</li>
+							<li>Stories</li>
+							<li>Academic</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
 			
-			<tr onclick="window.location.href='{% url 'index:information' %}'">
-				<td>
-					<h2>Information</h2>
-					<p>Things about me!</p>
-				</td>
-				<td>
-					<ul class="subcategory">
-						<li>Contact</li>
-						<li>Where Else I Can Be Found</li>
-						<li>Resume</li>
-						<li>Education</li>
-						<li>Job History</li>
-					</ul>
-				</td>
-				<td>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-				</td>
-			</tr>
-		</table>
+			<li onclick="window.location.href='{% url 'index:information' %}'">
+				<ul class="category">
+					<li>
+						<h2>Information</h2>
+						<p>Things about me!</p>
+					</li>
+					<li>
+						<ul class="subcategory">
+							<li>Contact</li>
+							<li>Where Else I Can Be Found</li>
+							<li>Resume</li>
+							<li>Education</li>
+							<li>Job History</li>
+						</ul>
+					</li>
+					<li>
+						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					</li>
+				</ul>
+			</li>
+		</ul>
 
 	</body>
 </html>
