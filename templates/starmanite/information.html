@@ -9,24 +9,24 @@
 {% block information %}INFORMATION{% endblock %}
 
 {% block main %}
-<!-- 	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:about' %}">About</a></td>
-		<td><a href="{% url 'index:resume' %}">Resume</a></td>
-	</tr></table>
+<!-- 	<ul class="tabul">
+		<li><a href="{% url 'index:about' %}">About</a></li>
+		<li><a href="{% url 'index:resume' %}">Resume</a></li>
+	</ul>
 
 	<hr/>
 	<br/> -->
 
 	{% block content %}
-		<table class="listing" style="border: 0px solid black;">
-			<tr>
-				<td>About</td>
-				<td><a href="{% url 'index:contact' %}">
+		<ul class="listing">
+			<li><ul class="listing-item">
+				<li>About</li>
+				<li><a href="{% url 'index:contact' %}">
 					Contact
 					<br/>
 					<img src="{% static 'starmanite/atSymbol.png' %}"/>
-				</a></td>
-				<td><a href="{% url 'index:current' %}">
+				</a></li>
+				<li><a href="{% url 'index:current' %}">
 					Current Resume
 					<br/>
 					<!-- <img src="{% static 'starmanite/resumeImage.png' %}"/> -->
@@ -37,9 +37,9 @@
 						<li>Programming skills</li>
 						<li>Mathematics expertise</li>
 					</ul>
-				</a></td>
-			</tr>
-		</table>
+				</a></li>
+			</ul></li>
+		</ul>
 	{% endblock %}
 
 	<br/>

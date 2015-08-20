@@ -9,61 +9,63 @@
 {% block products %}PRODUCTS{% endblock %}
 
 {% block main %}
-	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:programs' %}">Programs</a></td>
-		<td><a href="{% url 'index:3dprinting' %}">3D Printing</a></td>
-		<td><a href="{% url 'index:commissions' %}">Commissions</a></td>
-	</tr></table>
+	<ul class="tabs">
+		<li><a href="{% url 'index:programs' %}">Programs</a></li>
+		<li><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
+		<li><a href="{% url 'index:commissions' %}">Commissions</a></li>
+	</ul>
 
 	<hr/>
 	<br/>
 
-	<table class="listing" style="border: 0px solid black;">
-		<tr>
-			<td><a href="{% url 'index:programs' %}">Programs</a></td>
-			<td><a href="{% url 'index:arbychess' %}">
-				ArbyChess
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:spinningtop' %}">
-				Spinning Top Simulator
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:programs' %}">
-				More
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-		</tr>
-		<!-- <tr><td><p></p></td></tr> -->
-		<tr>
-			<td><a href="{% url 'index:3dprinting' %}">3D Printing</a></td>
-			<td><a href="{% url 'index:geometric' %}">
-				Geometric Designs
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<!-- <tr><td><p></p></td></tr> -->
-		<tr>
-			<td><a href="{% url 'index:commissions' %}">Commissions</a></td>
-			<td><a href="{% url 'index:trinkets' %}">
-				Code Trinkets
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:3dmodels' %}">
-				3D Models
-				<br/>
-				<img src="{% static 'placeholder_small.png' %}"/>
-			</a></td>
-			<td></td>
-		</tr>
-	</table>
+	{% block content %}
+		<ul class="listing">
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:programs' %}'"><a href="{% url 'index:programs' %}">Programs</a></li>
+				<li><a href="{% url 'index:arbychess' %}">
+					ArbyChess
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:spinningtop' %}">
+					Spinning Top Simulator
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:programs' %}">
+					More
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:3dprinting' %}'"><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
+				<li><a href="{% url 'index:geometric' %}">
+					Geometric Designs
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+				<li></li>
+				<li></li>
+			</ul></li>
+
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:commissions' %}'"><a href="{% url 'index:commissions' %}">Commissions</a></li>
+				<li><a href="{% url 'index:trinkets' %}">
+					Code Trinkets
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:3dmodels' %}">
+					3D Models
+					<br/>
+					<img src="{% static 'placeholder_small.png' %}"/>
+				</a></li>
+				<li></li>
+			</ul></li>
+		</ul>
+	{% endblock %}
 
 	<br/>
 	<hr/>

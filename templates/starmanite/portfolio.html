@@ -22,87 +22,92 @@
 	<br/>
 
 	{% block content %}
-	<table class="listing" style="border: 0px solid black;">
-		<tr>
-			<td><a href="{% url 'index:mathematics' %}">Mathematics</a></td>
-			<td><a href="{% url 'index:math-rec' %}">
-				Recreational
-				<br/>
-				<img src="{% static 'starmanite/CelticSquareKnot_example.png' %}" />
-			</a></td>
-			<td><a href="{% url 'index:math-classes' %}">
-				Classes
-				<br/><br/>
-				<img src="https://www.rit.edu/upub/logo-images/tiger_walking_rit.gif" />
-			</a></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:programming' %}">Programming</a></td>
-			<td><a href="{% url 'index:sigprogs' %}">
-				Significant Programs
-				<br/>
-				<img src="{% static 'starmanite/arbychessHexagonalChess_screenshot.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:prog-background' %}">
-				Programming Background
-				<br/>
-				<img src="{% static 'starmanite/pythonlogo.jpg' %}"/>
-			</a></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:3dmodelling' %}">3D Modelling</a></td>
-			<td><a href="{% url 'index:blender' %}">
-				Blender
-				<br/>
-				<img src="{% static 'starmanite/Blender examples/Septigems_HQ.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:maya' %}">
-				Maya
-				<br/>
-				<img src="{% static 'starmanite/RichAndJody_MinesOfDoom_title.png' %}"/>
-			</a></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:2dartwork' %}">2D Artwork</a></td>
-			<td><a href="{% url 'index:doodles' %}">
-				Doodles
-				<br/>
-				<img src="{% static 'starmanite/2D examples/Doodles/twistedTriquetraTriangle.jpg' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:sprites' %}">
-				Sprite Comics
-				<br/>
-				<img src="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:art-misc' %}">
-				Miscellaneous
-				<br/>
-				<img src="{% static 'starmanite/2D examples/fibonacciWeb.png' %}"/>
-			</a></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:triumphs' %}">Triumphs</a></td>
-			<td><a href="{% url 'index:creative' %}">
-				Creative
-				<br/>
-				<img src="{% static 'starmanite/Pirofi_script.JPG' %}"/>
-			</a></td>
-			<td><a href="{% url 'index:skill' %}">
-				Skill-based
-				<br/>
-				<img src="{% static 'starmanite/GBBA_logo.jpg' %}"/>
-			</a></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:websites' %}">Websites</a></td>
-			<td><a href="{% url 'index:diningcommons' %}">
-				Employee Scheduling<br/>(Dining Commons)
-				<br/>
-				<img src="{% static 'starmanite/DCDemo_supervisorSchedule_halfSize.png' %}"/>
-			</a></td>
-		</tr>
-	</table>
-{% endblock %}
+		<ul class="listing">
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:mathematics' %}'"><a href="{% url 'index:mathematics' %}">Mathematics</a></li>
+				<li><a href="{% url 'index:math-rec' %}">
+					Recreational
+					<br/>
+					<img src="{% static 'starmanite/CelticSquareKnot_example.png' %}" />
+				</a></li>
+				<li><a href="{% url 'index:math-classes' %}">
+					Classes
+					<br/>
+					<img src="https://www.rit.edu/upub/logo-images/tiger_walking_rit.gif" />
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:programming' %}'"><a href="{% url 'index:programming' %}">Programming</a></li>
+				<li><a href="{% url 'index:sigprogs' %}">
+					Significant Programs
+					<br/>
+					<img src="{% static 'starmanite/arbychessHexagonalChess_screenshot.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:prog-background' %}">
+					Programming Background
+					<br/>
+					<img src="{% static 'starmanite/pythonlogo.jpg' %}"/>
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:3dmodelling' %}'"><a href="{% url 'index:3dmodelling' %}">3D Modelling</a></li>
+				<li><a href="{% url 'index:blender' %}">
+					Blender
+					<br/>
+					<img src="{% static 'starmanite/Blender examples/Septigems_HQ.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:maya' %}">
+					Maya
+					<br/>
+					<img src="{% static 'starmanite/RichAndJody_MinesOfDoom_title.png' %}"/>
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:2dartwork' %}'"><a href="{% url 'index:2dartwork' %}">2D Artwork</a></li>
+				<li><a href="{% url 'index:doodles' %}">
+					Doodles
+					<br/>
+					<img src="{% static 'starmanite/2D examples/Doodles/twistedTriquetraTriangle.jpg' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:sprites' %}">
+					Sprite Comics
+					<br/>
+					<img src="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:art-misc' %}">
+					Miscellaneous
+					<br/>
+					<img src="{% static 'starmanite/2D examples/fibonacciWeb.png' %}"/>
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:triumphs' %}'"><a href="{% url 'index:triumphs' %}">Triumphs</a></li>
+				<li><a href="{% url 'index:creative' %}">
+					Creative
+					<br/>
+					<img src="{% static 'starmanite/Pirofi_script.JPG' %}"/>
+				</a></li>
+				<li><a href="{% url 'index:skill' %}">
+					Skill-based
+					<br/>
+					<img src="{% static 'starmanite/GBBA_logo.jpg' %}"/>
+				</a></li>
+			</ul></li>
+			
+			<li><ul class="listing-item">
+				<li onclick="window.location.href='{% url 'index:websites' %}'"><a href="{% url 'index:websites' %}">Websites</a></li>
+				<li><a href="{% url 'index:diningcommons' %}">
+					Employee Scheduling
+					<br/>
+					<img src="{% static 'starmanite/DCDemo_supervisorSchedule_halfSize.png' %}"/>
+				</a></li>
+			</ul></li>
+		</ul>
+	{% endblock %}
 
 	<br/>
 	<hr/>

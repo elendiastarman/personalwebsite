@@ -47,34 +47,53 @@ hr { border-color: gold; }
 	border-left: 0px;
 }
 
-/* .tabtable {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: collapse;
-	table-layout: fixed;
-	font-size: 1.75vw;
-}
-.tabtable td {
-	text-align: center;
-	font-weight: bold;
-	border-right: 1px solid gold;
-}
-.tabtable td:last-child {
-	border-right: 0px;
-}
-.tabtable td:hover {
-	background-color: #8000A0;
-} */
-
 .listing {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.listing-item {
+	/* display: table; */
+	margin: 15px 0;
+	padding-left: 0;
+}
+.listing-item > li {
+	display: inline-block;
+	width: 24%;
+	border: 1px solid transparent;
+	text-align: center;
+	vertical-align: middle;
+	height: 150px;
+}
+.listing-item img {
+	/* max-width: 1; */
+	max-height: 125px;
+}
+/* .listing-item > li:hover {
+	border: 1px solid gold;
+} */
+.listing-item > li:first-child {
+	/* display: table-cell; */
+	font-size: 1.6vw;
+	font-weight: bold;
+	/* height: 1%;
+	margin-top: auto;
+	margin-bottom: auto; */
+	line-height: 150px;
+}
+.listing-item > li:first-child:hover {
+	border: 1px solid gold;
+	cursor: pointer;
+}
+
+/* .listing {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	table-layout: fixed;
+	ul-layout: fixed;
 	border-spacing: 10px 20px;
 }
-.listing td {
+.listing li {
 	text-align: center;
 	vertical-align: middle;
 	border: 1px solid transparent;
@@ -82,26 +101,26 @@ hr { border-color: gold; }
 	margin-bottom: 10px;
 	font-size: 1.5vw;
 }
-.listing td a {
+.listing li a {
 	display: inline-block;
 	height: 100%;
 	width: 100%;
 }
-.listing td:hover {
+.listing li:hover {
 	border: 1px solid gold;
 }
-.listing tr td:first-child {
+.listing tr li:first-child {
 	font-size: 1.6vw;
 	font-weight: bold;
 }
-.listing tr td:first-child a {
+.listing tr li:first-child a {
 	display: initial;
 	height: initial;
 	width: initial;
 }
 .listing img {
 	max-width: 100%;
-}
+} */
 
 #content {
 	background-color: white;
