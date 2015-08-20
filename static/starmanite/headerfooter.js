@@ -46,6 +46,24 @@ $(document).keydown(function(event) {
 			window.location.href = tt[1].children[0].children[0].children[0].children[0].href;
 		}
 	} else if (event.which == 65) { //A, left
+		if (level == 1) {
+			var j = cat[1]-1;
+			if (j < 0) {j = cat[0].length-1}
+			window.location.href = cat[0][j].children[0].href;
+		} else if (level == 2) {
+			var j = subcat[1]-1;
+			if (j < 0) {j = subcat[0].length-1}
+			window.location.href = subcat[0][j].children[0].href;
+		}
 	} else if (event.which == 68) { //D, right
+		if (level == 1) {
+			var j = cat[1]+1;
+			if (j > cat[0].length-1) {j = 0}
+			window.location.href = cat[0][j].children[0].href;
+		} else if (level == 2) {
+			var j = subcat[1]+1;
+			if (j > subcat[0].length-1) {j = 0}
+			window.location.href = subcat[0][j].children[0].href;
+		}
 	}
 });
