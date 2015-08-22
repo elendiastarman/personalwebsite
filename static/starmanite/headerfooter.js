@@ -1,5 +1,8 @@
 $(document).keydown(function(event) {
 	var tabs = $('.tabs');
+	var path = $('#path')[0].children;
+	catText = path[0].innerHTML.toLowerCase();
+	if (path.length > 1){ subcatText = path[1].innerHTML.toLowerCase(); } else {subcatText="";}
 	var level = 1;
 	var cat;
 	var subcat;
@@ -11,7 +14,7 @@ $(document).keydown(function(event) {
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
 			
-			if (atext === atext.toUpperCase()) {
+			if (atext.toLowerCase() === catText) {
 				cat = [lis,i, atext,alink];
 			}
 		}
@@ -23,7 +26,7 @@ $(document).keydown(function(event) {
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
 			
-			if (atext === atext.toUpperCase()) {
+			if (atext.toLowerCase() === subcatText) {
 				level = 2;
 				subcat = [lis,i, atext,alink];
 			}
