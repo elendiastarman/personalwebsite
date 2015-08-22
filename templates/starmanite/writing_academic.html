@@ -2,17 +2,6 @@
 
 {% load staticfiles %}
 {% block stylingAndScripts %}
-	<style>
-		.listing-item {
-			display: flex;
-			align-items: center;
-		}
-		.listing-item > li {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	</style>
 {% endblock %}
 
 {% block path2 %} > <a href="{% url 'index:academic' %}">Academic</a>{% block path3 %}{% endblock %}{% endblock %}
