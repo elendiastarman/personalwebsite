@@ -1,47 +1,146 @@
-{% extends 'starmanite/information.html' %}
+{% extends "starmanite/information.html" %}
 
-{% load staticfiles %}
 {% block stylingAndScripts %}
+		<style>
+			.paper { background-color: white; color: black; font-family: "Arial", Arial, san-serif; }
+			.paper a { color: black; }
+			.paper h3 { font-weight: bold; margin-bottom: 0px;}
+			.paper ul { margin-top: 0px; }
+			.experience { border: 1px solid black; width: 100%; border-collapse: collapse; }
+			.experience td, th { border-left: 1px solid black; width: 33%; }
+			.experience th { border-bottom: 1px solid black; text-align: left; }
+		</style>
 {% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:resume' %}">Resume</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path3 %} > <a href="{% url 'index:resume' %}">Current Resume</a>{% block path4 %}{% endblock %}{% endblock %}
 
-{% block main %}
-	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:about' %}">About</a></td>
-		<td><a href="{% url 'index:resume' %}">RESUME</a></td>
-	</tr></table>
-
+{% block content %}
+	<ul class="tabs">
+		<li><a href="{% url 'index:contact' %}">Contact</a></li>
+		<li><a href="{% url 'index:resume' %}">RESUME</a></li>
+	</ul>
+	
 	<hr/>
 	<br/>
+	
+	<div class="paper" style="width: 670px; margin-left: auto; margin-right: auto; border: 1px solid black; padding: 80px;">
+		<h1 style="margin-top: 0px; margin-bottom: 0px;">Lee Burnette</h1>
+		
+		{% url 'index:portfolio' as portfolio_url %}
+		<p style="margin-top: 0px;">lee.burnette@www.starmaninnovations.com &bull; 336-402-9536 (texting only) &bull; 2605 Erst Ct, Louisville, KY 40220 <br/>
+		Portfolio: <a href="{{ portfolio_url }}">http://{{ request.get_host }}{{ portfolio_url }}</a></p>
 
-	<div id="precontent">
-		{% block content %}
-			<table class="listing" style="border: 0px solid black;">
-				<tr>
-					<td><a href="{% url 'index:current' %}">Current Resume</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-				<tr><td><p></p></td></tr>
-				<tr>
-					<td><a href="{% url 'index:education' %}">Education</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-				<tr><td><p></p></td></tr>
-				<tr>
-					<td><a href="{% url 'index:jobs' %}">Jobs</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-			</table>
-		{% endblock %}
+		<p><em>I am very good at problem solving, a skill that is fueled by my vast knowledge base and my voracious appetite for learning about all sorts of things, as well as an innate ability to pick out patterns and understand complex concepts. I also constantly create new products and enjoy helping other people.</em></p>
+
+		<h3>WORK EXPERIENCE</h3>
+		<ul>
+			<li>Python class Teacher's Assistant, Summer Academy for Advancing Deaf and Hard of Hearing Students in Fields of Computing, Seattle, WA, Summer 2013</li>
+			<li>Software developer, RIT Research Experience for Undergraduates, Summer 2014</li>
+			<li>RIT Dining Commons Student Employee, Feb 7, 2014 – May 21, 2015</li>
+		</ul>
+		
+		<h3>EDUCATION</h3>
+		<ul>
+			<li><strong>Bachelor of Science in Applied Mathematics</strong>, Rochester Institute of Technology, Rochester, NY (May 2015)</li>
+			<li>Web Development and Introduction to Algorithms, University of Washington—Seattle, summers 2011 & 2013</li>
+		</ul>
+		
+		<h3>PORTFOLIO HIGHLIGHTS</h3>
+		<ul>
+			<li>Learned Django and then built an employee scheduling website from scratch in 3 months</li>
+			<li>Using Python, designed and developed a program intended to help eye-tracking experts analyze eye tracking data</li>
+			<li>Using Blitz 2D/3D, programmed four complete games since 2006: SpaceWars3D, Martian Chess For 4, Old West Pong, Block Dude. Two more in progress: Lumien the Hedgehog, ArbyChess</li>
+			<li>Using Maya, created a two-minute short film with 3 other people in summer of 2011</li>
+			<li>Modelled a piano within 2 months of learning Maya</li>
+		</ul>
+
+		<h3>PROGRAMMING SKILLS</h3>
+		<table class="experience">
+			<tr>
+				<th>Expert</th>
+				<th>Intermediate</th>
+				<th>Basic</th>
+			</tr>
+			<tr>
+				<td>Python</td>
+				<td>Javascript</td>
+				<td>Ajax</td>
+			</tr>
+			<tr>
+				<td>Blitz 2D/3D</td>
+				<td>Lua</td>
+				<td>MySQL</td>
+			</tr>
+			<tr>
+				<td>Django</td>
+				<td>Java</td>
+				<td>PHP</td>
+			</tr>
+			<tr>
+				<td>HTML</td>
+				<td>Ruby</td>
+				<td>MIPS Assembly</td>
+			</tr>
+			<tr>
+				<td>CSS</td>
+				<td></td>
+				<td>C/C++</td>
+			</tr>
+			<tr>
+				<td>LaTeX</td>
+				<td></td>
+				<td>Prolog</td>
+			</tr>
+			<tr>
+				<td>TI-BASIC</td>
+				<td></td>
+				<td>jQuery</td>
+			</tr>
+		</table>
+
+		<h3>MATHEMATICS EXPERTISE</h3>
+		<table class="experience">
+			<tr>
+				<th>Discrete</th>
+				<th>Calculus</th>
+				<th>Statistics</th>
+			</tr>
+			<tr>
+				<td>Discrete Mathematics I, II</td>
+				<td>Calculus 1, 2, 3</td>
+				<td>Probability</td>
+			</tr>
+			<tr>
+				<td>Number Theory</td>
+				<td>Multivariable Calculus</td>
+				<td>Combinatorics</td>
+			</tr>
+			<tr>
+				<td>Graph Theory</td>
+				<td>Vector Calculus</td>
+				<td>Applied Statistics</td>
+			</tr>
+			<tr>
+				<td>Linear Algebra I, II</td>
+				<td>Differential Equations I</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Real Variables I, II</td>
+				<td>Mathematical Modelling</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Numerical Analysis</td>
+				<td>Dynamical Systems</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Abstract Algebra I, II</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		
 	</div>
-
-	<br/>
-	<hr/>
 {% endblock %}

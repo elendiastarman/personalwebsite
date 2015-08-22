@@ -9,13 +9,6 @@
 {% block information %}INFORMATION{% endblock %}
 
 {% block main %}
-<!-- 	<ul class="tabul">
-		<li><a href="{% url 'index:about' %}">About</a></li>
-		<li><a href="{% url 'index:resume' %}">Resume</a></li>
-	</ul>
-
-	<hr/>
-	<br/> -->
 
 	{% block content %}
 		<ul class="listing">
@@ -26,10 +19,10 @@
 					<br/>
 					<img src="{% static 'starmanite/atSymbol.png' %}"/>
 				</a></li>
-				<li><a href="{% url 'index:current' %}">
+				<li><a href="{% url 'index:resume' %}">
 					Current Resume
 					<br/>
-					<!-- <img src="{% static 'starmanite/resumeImage.png' %}"/> -->
+					
 					<ul style="text-align: left;">
 						<li>Work experience</li>
 						<li>Education</li>
