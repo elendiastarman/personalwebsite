@@ -1,36 +1,31 @@
 $(document).keydown(function(event) {
-	console.log(event.which);
-	var tt = $('.tabtable');
+	var tabs = $('.tabs');
 	var level = 1;
 	var cat;
 	var subcat;
 	
-	if (tt.length > 0) {
-		var tds = tt[0].children[0].children[0].children;
-		for (var i=0; i<tds.length; i++) {
-			var elem = tds[i];
+	if (tabs.length > 0) {
+		var lis = tabs[0].children;
+		for (var i=0; i<lis.length; i++) {
+			var elem = lis[i];
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
-			console.log(atext);
 			
 			if (atext === atext.toUpperCase()) {
-				cat = [tds,i, atext,alink];
-				console.log(cat);
+				cat = [lis,i, atext,alink];
 			}
 		}
 	}
-	if (tt.length > 1) {
-		var tds = tt[1].children[0].children[0].children;
-		for (var i=0; i<tds.length; i++) {
-			var elem = tds[i];
+	if (tabs.length > 1) {
+		var lis = tabs[1].children;
+		for (var i=0; i<lis.length; i++) {
+			var elem = lis[i];
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
-			console.log(atext);
 			
 			if (atext === atext.toUpperCase()) {
 				level = 2;
-				subcat = [tds,i, atext,alink];
-				console.log(subcat);
+				subcat = [lis,i, atext,alink];
 			}
 		}
 	}
@@ -42,8 +37,8 @@ $(document).keydown(function(event) {
 			window.location.href = cat[3];
 		}
 	} else if (event.which == 83) { //S, down
-		if (level == 1 && tt.length == 2) {
-			window.location.href = tt[1].children[0].children[0].children[0].children[0].href;
+		if (level == 1 && tabs.length == 2) {
+			window.location.href = tabs[1].children[0].children[0].href;
 		}
 	} else if (event.which == 65) { //A, left
 		if (level == 1) {
