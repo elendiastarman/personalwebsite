@@ -9,8 +9,16 @@
 {% block information %}INFORMATION{% endblock %}
 
 {% block main %}
+	<ul class="tabs">
+		<li><a href="{% url 'index:contact' %}">{% block contact %}Contact{% endblock %}</a></li>
+		<li><a href="{% url 'index:resume' %}">{% block resume %}Resume{% endblock %}</a></li>
+	</ul>
+	
+	<hr/>
+	<br/>
 
 	{% block content %}
+		
 		<ul class="listing">
 			<li><ul class="listing-item">
 				<li>About</li>

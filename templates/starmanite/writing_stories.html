@@ -6,36 +6,22 @@
 
 {% block path2 %} > <a href="{% url 'index:stories' %}">Stories</a>{% block path3 %}{% endblock %}{% endblock %}
 
-{% block main %}
-	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:stories' %}">STORIES</a></td>
-		<td><a href="{% url 'index:blog' %}">Blog</a></td>
-		<td><a href="{% url 'index:academic' %}">Academic</a></td>
-	</tr></table>
+{% block stories %}STORIES{% endblock %}
 
-	<hr/>
-	<br/>
-
-	<div id="content">
-		{% block content %}
-			<table class="listing" style="border: 0px solid black;">
-				<tr>
-					<td><a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-				<tr><td><p></p></td></tr>
-				<tr>
-					<td><a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-			</table>
-		{% endblock %}
-	</div>
-
-	<br/>
-	<hr/>
+{% block content %}
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+		</ul></li>
+	</ul>
 {% endblock %}

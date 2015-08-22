@@ -2,33 +2,31 @@
 
 {% load staticfiles %}
 {% block stylingAndScripts %}
+	<style>
+		.listing-item {
+			display: flex;
+			align-items: center;
+		}
+		.listing-item > li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
 {% endblock %}
 
 {% block path2 %} > <a href="{% url 'index:academic' %}">Academic</a>{% block path3 %}{% endblock %}{% endblock %}
 
-{% block main %}
-	<table class="tabtable"><tr>
-		<td><a href="{% url 'index:stories' %}">Stories</a></td>
-		<td><a href="{% url 'index:blog' %}">Blog</a></td>
-		<td><a href="{% url 'index:academic' %}">ACADEMIC</a></td>
-	</tr></table>
+{% block academic %}ACADEMIC{% endblock %}
 
-	<hr/>
-	<br/>
-
-	<div id="content">
-		{% block content %}
-			<table class="listing" style="border: 0px solid black;">
-				<tr>
-					<td><a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-					<td><img src="{% static 'placeholder_small.png' %}"/></td>
-				</tr>
-			</table>
-		{% endblock %}
-	</div>
-
-	<br/>
-	<hr/>
+{% block content %}
+	<ul class="listing"><li>
+		<ul class="listing-item">
+			<!-- <li><span style="display: table-cell; vertical-align: middle; height: 150px;"><a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a></span></li> -->
+			<li><a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+			<li><img src="{% static 'placeholder_small.png' %}"/></li>
+		</ul>
+	</li></ul>
 {% endblock %}

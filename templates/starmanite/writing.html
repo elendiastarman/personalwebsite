@@ -10,14 +10,15 @@
 
 {% block main %}
 	<ul class="tabs">
-		<li><a href="{% url 'index:blog' %}">Blog</a></li>
-		<li><a href="{% url 'index:stories' %}">Stories</a></li>
-		<li><a href="{% url 'index:academic' %}">Academic</a></li>
+		<li><a href="{% url 'index:blog' %}">{% block blog %}Blog{% endblock %}</a></li>
+		<li><a href="{% url 'index:stories' %}">{% block stories %}Stories{% endblock %}</a></li>
+		<li><a href="{% url 'index:academic' %}">{% block academic %}Academic{% endblock %}</a></li>
 	</ul>
 
 	<hr/>
 	<br/>
 
+	<div id="content">
 	{% block content %}
 		<ul class="listing">
 			<li><ul class="listing-item">
@@ -54,6 +55,7 @@
 			</ul></li>
 		</ul>
 	{% endblock %}
+	</div>
 	
 	<br/>
 	<hr/>

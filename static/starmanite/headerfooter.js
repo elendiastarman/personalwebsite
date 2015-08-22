@@ -20,6 +20,7 @@ $(document).keydown(function(event) {
 		}
 	}
 	if (tabs.length > 1) {
+		console.log(tabs[1].children);
 		var lis = tabs[1].children;
 		for (var i=0; i<lis.length; i++) {
 			var elem = lis[i];
@@ -65,3 +66,7 @@ $(document).keydown(function(event) {
 		}
 	}
 });
+
+document.ready = function() {
+	
+};
