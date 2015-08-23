@@ -17,8 +17,8 @@
 	<hr/>
 	<br/>
 
+	<div id="content">
 	{% block content %}
-		
 		<ul class="listing">
 			<li><ul class="listing-item">
 				<li>About</li>
@@ -27,9 +27,9 @@
 					<br/>
 					<img src="{% static 'starmanite/atSymbol.png' %}"/>
 				</a></li>
-				<li><a href="{% url 'index:resume' %}">
+				<li style="align-items: initial;"><a href="{% url 'index:resume' %}">
 					Current Resume
-					<br/>
+					<br/><br/>
 					
 					<ul style="text-align: left;">
 						<li>Work experience</li>
@@ -42,6 +42,7 @@
 			</ul></li>
 		</ul>
 	{% endblock %}
+	</div>
 
 	<br/>
 	<hr/>

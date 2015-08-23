@@ -10,18 +10,19 @@
 
 {% block main %}
 	<ul class="tabs">
-		<li><a href="{% url 'index:programs' %}">Programs</a></li>
-		<li><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
-		<li><a href="{% url 'index:commissions' %}">Commissions</a></li>
+		<li><a href="{% url 'index:programs' %}">{% block programs %}Programs{% endblock %}</a></li>
+		<li><a href="{% url 'index:3dprinting' %}">{% block 3dprinting %}3D Printing{% endblock %}</a></li>
+		<li><a href="{% url 'index:commissions' %}">{% block commissions %}Commissions{% endblock %}</a></li>
 	</ul>
 
 	<hr/>
 	<br/>
 
+	<div id="content">
 	{% block content %}
 		<ul class="listing">
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:programs' %}'"><a href="{% url 'index:programs' %}">Programs</a></li>
+				<li><a href="{% url 'index:programs' %}">Programs</a></li>
 				<li><a href="{% url 'index:arbychess' %}">
 					ArbyChess
 					<br/>
@@ -40,7 +41,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:3dprinting' %}'"><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
+				<li><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
 				<li><a href="{% url 'index:geometric' %}">
 					Geometric Designs
 					<br/>
@@ -51,7 +52,7 @@
 			</ul></li>
 
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:commissions' %}'"><a href="{% url 'index:commissions' %}">Commissions</a></li>
+				<li><a href="{% url 'index:commissions' %}">Commissions</a></li>
 				<li><a href="{% url 'index:trinkets' %}">
 					Code Trinkets
 					<br/>
@@ -66,6 +67,7 @@
 			</ul></li>
 		</ul>
 	{% endblock %}
+	</div>
 
 	<br/>
 	<hr/>

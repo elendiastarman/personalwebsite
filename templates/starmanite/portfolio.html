@@ -21,10 +21,11 @@
 	<hr/>
 	<br/>
 
+	<div id="content">
 	{% block content %}
 		<ul class="listing">
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:mathematics' %}'"><a href="{% url 'index:mathematics' %}">Mathematics</a></li>
+				<li><a href="{% url 'index:mathematics' %}">Mathematics</a></li>
 				<li><a href="{% url 'index:math-rec' %}">
 					Recreational
 					<br/>
@@ -38,7 +39,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:programming' %}'"><a href="{% url 'index:programming' %}">Programming</a></li>
+				<li><a href="{% url 'index:programming' %}">Programming</a></li>
 				<li><a href="{% url 'index:sigprogs' %}">
 					Significant Programs
 					<br/>
@@ -52,7 +53,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:3dmodelling' %}'"><a href="{% url 'index:3dmodelling' %}">3D Modelling</a></li>
+				<li><a href="{% url 'index:3dmodelling' %}">3D Modelling</a></li>
 				<li><a href="{% url 'index:blender' %}">
 					Blender
 					<br/>
@@ -66,7 +67,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:2dartwork' %}'"><a href="{% url 'index:2dartwork' %}">2D Artwork</a></li>
+				<li><a href="{% url 'index:2dartwork' %}">2D Artwork</a></li>
 				<li><a href="{% url 'index:doodles' %}">
 					Doodles
 					<br/>
@@ -85,7 +86,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:triumphs' %}'"><a href="{% url 'index:triumphs' %}">Triumphs</a></li>
+				<li><a href="{% url 'index:triumphs' %}">Triumphs</a></li>
 				<li><a href="{% url 'index:creative' %}">
 					Creative
 					<br/>
@@ -99,7 +100,7 @@
 			</ul></li>
 			
 			<li><ul class="listing-item">
-				<li onclick="window.location.href='{% url 'index:websites' %}'"><a href="{% url 'index:websites' %}">Websites</a></li>
+				<li><a href="{% url 'index:websites' %}">Websites</a></li>
 				<li><a href="{% url 'index:diningcommons' %}">
 					Employee Scheduling
 					<br/>
@@ -108,6 +109,7 @@
 			</ul></li>
 		</ul>
 	{% endblock %}
+	</div>
 
 	<br/>
 	<hr/>
