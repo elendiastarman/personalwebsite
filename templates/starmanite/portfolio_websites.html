@@ -9,12 +9,12 @@
 {% block webs %}WEBSITES{% endblock %}
 
 {% block content %}
-	<table class="listing" style="border: 0px solid black;">
-		<tr>
-			<td><a href="{% url 'index:diningcommons' %}">Employee Scheduling<br/>(Dining Commons)</a></td>
-			<td><img src="{% static 'starmanite/DCDemo_supervisorSchedule_halfSize.png' %}"/></td>
-			<td><img src="{% static 'starmanite/DCDemo_supervisorGenerateSchedule_halfSize.png' %}"/></td>
-			<td><img src="{% static 'starmanite/DCDemo_supervisorAdmin_halfSize.png' %}"/></td>
-		</tr>
-	</table>
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:diningcommons' %}">Employee Scheduling<br/>(Dining Commons)</a></li>
+			<li><img src="{% static 'starmanite/DCDemo_supervisorSchedule_halfSize.png' %}"/></li>
+			<li><img src="{% static 'starmanite/DCDemo_supervisorGenerateSchedule_halfSize.png' %}"/></li>
+			<li><img src="{% static 'starmanite/DCDemo_supervisorAdmin_halfSize.png' %}"/></li>
+		</ul></li>
+	</ul>
 {% endblock %}

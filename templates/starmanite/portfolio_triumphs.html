@@ -9,18 +9,19 @@
 {% block triumph %}TRIUMPHS{% endblock %}
 
 {% block content %}
-	<table class="listing" style="border: 0px solid black;">
-		<tr>
-			<td><a href="{% url 'index:creative' %}">Creative</a></td>
-			<td><img src="{% static 'starmanite/NaNoWriMo_logo.png' %}"/><br/><em>Image courtesy of National Novel Writing Month.</em></td>
-			<td><img src="{% static 'starmanite/forgedRailroadSpikeKnife.JPG' %}"/></td>
-			<td><img src="{% static 'starmanite/Pirofi_script.JPG' %}"/></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:skill' %}">Skill-based</a></td>
-			<td><img src="{% static 'starmanite/NCSSM_logo.jpg' %}"/></td>
-			<td><img src="{% static 'starmanite/GBBA_logo.jpg' %}"/></td>
-			<td><img src="{% static 'starmanite/Challenge24_logo.jpg' %}"/></td>
-		</tr>
-	</table>
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:creative' %}">Creative</a></li>
+			<li><img src="{% static 'starmanite/NaNoWriMo_logo.png' %}" width="33%" title="Image courtesy of National Novel Writing Month."/></li>
+			<li><img src="{% static 'starmanite/forgedRailroadSpikeKnife.JPG' %}"/></li>
+			<li><img src="{% static 'starmanite/Pirofi_script.JPG' %}"/></li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:skill' %}">Skill-based</a></li>
+			<li><img src="{% static 'starmanite/NCSSM_logo.jpg' %}"/></li>
+			<li><img src="{% static 'starmanite/GBBA_logo.jpg' %}"/></li>
+			<li><img src="{% static 'starmanite/Challenge24_logo.jpg' %}"/></li>
+		</ul></li>
+	</ul>
 {% endblock %}

@@ -9,17 +9,18 @@
 {% block math %}MATHEMATICS{% endblock %}
 
 {% block content %}
-	<table class="listing" style="border: 0px solid black;">
-		<tr>
-			<td><a href="{% url 'index:math-rec' %}">Recreational</a></td>
-			<td><img src="{% static 'starmanite/math_rec_img1.png' %}"/></td>
-			<td><img src="{% static 'starmanite/CelticSquareKnot_example.png' %}"/></td>
-			<td><img src="{% static 'starmanite/hvzFormations.png' %}"/></td>
-		</tr>
-		<tr>
-			<td><a href="{% url 'index:math-classes' %}">Classes</a></td>
-			<td><img src="{% static 'starmanite/RIT_logo.gif' %}" /></td>
-			<td><img src="{% static 'starmanite/NCSSM_logo.jpg' %}"/></td>
-		</tr>
-	</table>
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:math-rec' %}">Recreational</a></li>
+			<li><img src="{% static 'starmanite/math_rec_img1.png' %}"/></li>
+			<li><img src="{% static 'starmanite/CelticSquareKnot_example.png' %}"/></li>
+			<li><img src="{% static 'starmanite/hvzFormations.png' %}"/></li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:math-classes' %}">Classes</a></li>
+			<li><img src="{% static 'starmanite/RIT_logo.gif' %}" /></li>
+			<li><img src="{% static 'starmanite/NCSSM_logo.jpg' %}"/></li>
+		</ul></li>
+	</ul>
 {% endblock %}
