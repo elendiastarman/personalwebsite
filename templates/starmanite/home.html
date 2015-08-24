@@ -7,8 +7,8 @@
 
 {% block body %}
 	<ul class="category-list">
-		<li onclick="window.location.href='{% url 'index:products' %}'">
-			<ul class="category">
+		<li>
+			<ul class="category" onclick="window.location.href='{% url 'index:products' %}'">
 				<li>
 					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
 				</li>
@@ -26,8 +26,8 @@
 			</ul>
 		</li>
 		
-		<li onclick="window.location.href='{% url 'index:portfolio' %}'">
-			<ul class="category">
+		<li>
+			<ul class="category" onclick="window.location.href='{% url 'index:portfolio' %}'">
 				<li>
 					<h2>Portfolio</h2>
 					<p>Things I made!</p>
@@ -48,8 +48,8 @@
 			</ul>
 		</li>
 		
-		<li onclick="window.location.href='{% url 'index:writing' %}'">
-			<ul class="category">
+		<li>
+			<ul class="category" onclick="window.location.href='{% url 'index:writing' %}'">
 				<li>
 					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
 				</li>
@@ -67,8 +67,8 @@
 			</ul>
 		</li>
 		
-		<li onclick="window.location.href='{% url 'index:information' %}'">
-			<ul class="category">
+		<li>
+			<ul class="category" onclick="window.location.href='{% url 'index:information' %}'">
 				<li>
 					<h2>Information</h2>
 					<p>Things about me!</p>
