@@ -72,6 +72,13 @@ document.ready = function() {
 		$(elems[i]).parent().addClass('clickable');
 		//console.log(elems[i]);
 		var url = elems[i].href;
-		$(elems[i]).parent().click(url, function(){window.location.href = url;});
+		// var f = function(u){window.location.href = u;};
+		
+		console.log(url);
+		$(elems[i]).parent().on('click', {url:url}, function(event){gotoURL( event.data.url )});
 	}
 };
+
+function gotoURL(url){
+	window.location.href = url;
+}
