@@ -1,46 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//Dli XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/Dli/xhtml11.dli">
+{% extends 'starmanite/shell.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<title>Starman Innovations</title>
-		
-		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="{% static 'starmanite/headerfooter.js' %}"></script>
-		
-		{% block stylingAndScripts %}
+{% block head %}
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
+	<script type="text/javascript" src="{% static 'starmanite/headerfooter.js' %}"></script>
+	
+	{% block stylingAndScripts %}
+	{% endblock %}
+{% endblock %}
+
+{% block body %}
+	<h3 id="path" style="padding-bottom: 20px;">You are here: {% block path %}{% endblock %}</h3>
+	
+	<ul class="tabs">
+		<li><a href="{% url 'index:products' %}">{% block products %}Products{% endblock %}</a></li>
+		<li><a href="{% url 'index:portfolio' %}">{% block portfolio %}Portfolio{% endblock %}</a></li>
+		<li><a href="{% url 'index:writing' %}">{% block writing %}Writing{% endblock %}</a></li>
+		<li><a href="{% url 'index:information' %}">{% block information %}Information{% endblock %}</a></li>
+	</ul>
+	<hr/>
+
+	<div id="main">
+		{% block main %}
 		{% endblock %}
-	</head>
-	
-	<body>
-	
-		<div id="header">
-			<div id="logo">
-				<a href="{% url 'index:home' %}">
-					<img src="{% static 'starmanite/StarmanInnovations_logo2_large_iconfix.png' %}"
-						 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
-				</a>
-			</div>
-		</div>
-		
-		<h3 id="path" style="padding-bottom: 20px;">You are here: {% block path %}{% endblock %}</h3>
-		
-		<!-- <br/> -->
-		<ul class="tabs">
-			<li><a href="{% url 'index:products' %}">{% block products %}Products{% endblock %}</a></li>
-			<li><a href="{% url 'index:portfolio' %}">{% block portfolio %}Portfolio{% endblock %}</a></li>
-			<li><a href="{% url 'index:writing' %}">{% block writing %}Writing{% endblock %}</a></li>
-			<li><a href="{% url 'index:information' %}">{% block information %}Information{% endblock %}</a></li>
-		</ul>
-		<hr/>
-	
-		<div id="main">
-			{% block main %}
-			{% endblock %}
-		</div>
-	
-	</body>
-</html>
+	</div>
+{% endblock %}

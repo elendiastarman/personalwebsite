@@ -7,22 +7,24 @@
 		<title>Starman Innovations</title>
 		
 		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/shell.css' %}" />
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	
-		{% block header %}{% endblock %}
+		{% block head %}{% endblock %}
 	</head>
 	
 	<body>
 	
 		<div id="logo">
 			<a href="{% url 'index:home' %}">
-				<img src="{% static 'starmanite/StarmanInnovations_logo2_large_iconfix.png' %}"
-					 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
+				<img src="{% static 'starmanite/StarmanInnovations_logo2_large_iconfix.png' %}"/>
+					 <!-- style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/> -->
 			</a>
 		</div>
 	
-		{% block body %}{% endblock %}
+		<div id="body">
+			{% block body %}{% endblock %}
+		</div>
 
 	</body>
 </html>

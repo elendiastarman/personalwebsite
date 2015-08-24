@@ -1,103 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//Dli XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/Dli/xhtml11.dli">
+{% extends 'starmanite/shell.html' %}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<title>Starman Innovations</title>
+{% block head %}		
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'starmanite/home.css' %}" />
+{% endblock %}
+
+{% block body %}
+	<ul class="category-list">
+		<li onclick="window.location.href='{% url 'index:products' %}'">
+			<ul class="category">
+				<li>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</li>
+				<li>
+					<h2>Products</h2>
+					<p>Things for sale!</p>
+				</li>
+				<li>
+					<ul class="subcategories">
+						<li>Programs</li>
+						<li>3D Printing</li>
+						<li>Commissions</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
 		
-		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/home.css' %}" />
-		<!-- <script type="text/javascript" src="{% static 'scheduler/headerFooter.js' %}"></script> -->
-	</head>
-	
-	<body>
-		<div id="logo">
-			<a href="{% url 'index:home' %}">
-				<img src="{% static 'starmanite/StarmanInnovations_logo2_large_iconfix.png' %}"
-						 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
-			</a>
-		</div>
-
-		<ul class="category-list">
-			<li onclick="window.location.href='{% url 'index:products' %}'">
-				<ul class="category">
-					<li>
-						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-					</li>
-					<li>
-						<h2>Products</h2>
-						<p>Things for sale!</p>
-					</li>
-					<li>
-						<ul class="subcategories">
-							<li>Programs</li>
-							<li>3D Printing</li>
-							<li>Commissions</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			
-			<li onclick="window.location.href='{% url 'index:portfolio' %}'">
-				<ul class="category">
-					<li>
-						<h2>Portfolio</h2>
-						<p>Things I made!</p>
-					</li>
-					<li>
-						<ul class="subcategories">
-							<li>Mathematics</li>
-							<li>Programming</li>
-							<li>3D Modelling</li>
-							<li>2D Artwork</li>
-							<li>Triumphs</li>
-							<li>Websites</li>
-						</ul>
-					</li>
-					<li>
-						<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
-					</li>
-				</ul>
-			</li>
-			
-			<li onclick="window.location.href='{% url 'index:writing' %}'">
-				<ul class="category">
-					<li>
-						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-					</li>
-					<li>
-						<h2>Writing</h2>
-						<p>Things I wrote!</p>
-					</li>
-					<li>
-						<ul class="subcategories">
-							<li>Blog</li>
-							<li>Stories</li>
-							<li>Academic</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			
-			<li onclick="window.location.href='{% url 'index:information' %}'">
-				<ul class="category">
-					<li>
-						<h2>Information</h2>
-						<p>Things about me!</p>
-					</li>
-					<li>
-						<ul class="subcategories">
-							<li>Contact</li>
-							<li>Resume</li>
-						</ul>
-					</li>
-					<li>
-						<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
-					</li>
-				</ul>
-			</li>
-		</ul>
-
-	</body>
-</html>
+		<li onclick="window.location.href='{% url 'index:portfolio' %}'">
+			<ul class="category">
+				<li>
+					<h2>Portfolio</h2>
+					<p>Things I made!</p>
+				</li>
+				<li>
+					<ul class="subcategories">
+						<li>Mathematics</li>
+						<li>Programming</li>
+						<li>3D Modelling</li>
+						<li>2D Artwork</li>
+						<li>Triumphs</li>
+						<li>Websites</li>
+					</ul>
+				</li>
+				<li>
+					<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
+				</li>
+			</ul>
+		</li>
+		
+		<li onclick="window.location.href='{% url 'index:writing' %}'">
+			<ul class="category">
+				<li>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</li>
+				<li>
+					<h2>Writing</h2>
+					<p>Things I wrote!</p>
+				</li>
+				<li>
+					<ul class="subcategories">
+						<li>Blog</li>
+						<li>Stories</li>
+						<li>Academic</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		
+		<li onclick="window.location.href='{% url 'index:information' %}'">
+			<ul class="category">
+				<li>
+					<h2>Information</h2>
+					<p>Things about me!</p>
+				</li>
+				<li>
+					<ul class="subcategories">
+						<li>Contact</li>
+						<li>Resume</li>
+					</ul>
+				</li>
+				<li>
+					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+				</li>
+			</ul>
+		</li>
+	</ul>
+{% endblock %}
