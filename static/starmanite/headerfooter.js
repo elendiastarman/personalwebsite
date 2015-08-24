@@ -1,8 +1,8 @@
 $(document).keydown(function(event) {
 	var tabs = $('.tabs');
 	var path = $('#path')[0].children;
-	catText = path[0].innerHTML.toLowerCase();
-	if (path.length > 1){ subcatText = path[1].innerHTML.toLowerCase(); } else {subcatText="";}
+	catLink = path[0].href;
+	if (path.length > 1){ subcatLink = path[1].href; } else {subcatLink="";}
 	var level = 1;
 	var cat;
 	var subcat;
@@ -14,20 +14,19 @@ $(document).keydown(function(event) {
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
 			
-			if (atext.toLowerCase() === catText) {
+			if (alink === catLink) {
 				cat = [lis,i, atext,alink];
 			}
 		}
 	}
 	if (tabs.length > 1) {
-		console.log(tabs[1].children);
 		var lis = tabs[1].children;
 		for (var i=0; i<lis.length; i++) {
 			var elem = lis[i];
 			var atext = elem.children[0].innerHTML;
 			var alink = elem.children[0].href;
 			
-			if (atext.toLowerCase() === subcatText) {
+			if (alink === subcatLink) {
 				level = 2;
 				subcat = [lis,i, atext,alink];
 			}
@@ -68,5 +67,9 @@ $(document).keydown(function(event) {
 });
 
 document.ready = function() {
-	
+	var elems = $('.listing-item > li:first-child').children('a');
+	for (var i=0; i<elems.length-1; i++) {
+		$(elems[i]).parent().addClass('clickable');
+		$(elems[i]).parent().click(function(){window.location.href = elems[i].href});
+	}
 };
