@@ -68,8 +68,10 @@ $(document).keydown(function(event) {
 
 document.ready = function() {
 	var elems = $('.listing-item > li:first-child').children('a');
-	for (var i=0; i<elems.length-1; i++) {
+	for (var i=0; i<elems.length; i++) {
 		$(elems[i]).parent().addClass('clickable');
-		$(elems[i]).parent().click(function(){window.location.href = elems[i].href});
+		//console.log(elems[i]);
+		var url = elems[i].href;
+		$(elems[i]).parent().click(url, function(){window.location.href = url;});
 	}
 };
