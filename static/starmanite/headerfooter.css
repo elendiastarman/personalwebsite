@@ -18,9 +18,13 @@ body {
 	padding-bottom: 10px;
 }
 
-a {
-	color: lightgray;
+#path a {
+	color: #fff;
 }
+#path a:hover {
+	color: #ddd;
+}
+
 .tabs a, .listing a {
 	color: #FFE100;
 	text-decoration: none;
@@ -79,6 +83,10 @@ hr { border-color: gold; }
 .clickable:hover {
 	border: 1px solid gold;
 	cursor: pointer;
+}
+
+.current a {
+	text-decoration: underline;
 }
 
 #content {
