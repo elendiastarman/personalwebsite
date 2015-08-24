@@ -24,10 +24,11 @@
 						 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
 				</a>
 			</div>
-			<h3 id="path">You are here: {% block path %}{% endblock %}</h3>
 		</div>
 		
-		<br/>
+		<h3 id="path" style="padding-bottom: 20px;">You are here: {% block path %}{% endblock %}</h3>
+		
+		<!-- <br/> -->
 		<ul class="tabs">
 			<li><a href="{% url 'index:products' %}">{% block products %}Products{% endblock %}</a></li>
 			<li><a href="{% url 'index:portfolio' %}">{% block portfolio %}Portfolio{% endblock %}</a></li>
