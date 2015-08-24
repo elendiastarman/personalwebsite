@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dli XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/Dli/xhtml11.dli">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<title>Starman Innovations</title>
+		
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+		{% block header %}{% endblock %}
+	</head>
+	
+	<body>
+	
+		<div id="logo">
+			<a href="{% url 'index:home' %}">
+				<img src="{% static 'starmanite/StarmanInnovations_logo2_large_iconfix.png' %}"
+					 style="display: block; width: 50%; background-color: black; margin-left: auto; margin-right: auto;"/>
+			</a>
+		</div>
+	
+		{% block body %}{% endblock %}
+
+	</body>
+</html>
