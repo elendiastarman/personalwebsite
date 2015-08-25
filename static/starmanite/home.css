@@ -10,7 +10,6 @@ ul {
 	color: #500070;
 	padding: 10px 10px;
 	margin: 10px 10px;
-	/* width: 50%; */
 	margin-left: auto;
 	margin-right: auto;
 	cursor: pointer;
@@ -27,9 +26,13 @@ ul {
 	width: 150px;
 }
 
-.category > li:nth-child(2) {
-	margin-left: 0px;
-	margin-right: 0px;
+@media screen and (min-width: 1050px) {
+	.category {
+		display: block;
+		width: 50%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
 
 .subcategories {
@@ -39,4 +42,9 @@ ul {
 }
 .subcategories > li {
 	text-align: left;
+}
+@media screen and (max-width: 550px) {
+	.subcategories {
+		margin-bottom: 5px;
+	}
 }
