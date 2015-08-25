@@ -17,7 +17,6 @@ $(document).keydown(function(event) {
 			if (alink === catLink) {
 				cat = [lis,i, atext,alink];
 				$(elem).addClass("current");
-				console.log(elem);
 			}
 		}
 	}

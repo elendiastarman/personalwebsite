@@ -5,11 +5,12 @@ ul {
 }
 
 .category {
+	display: inline-block;
 	background-color: #fff;
 	color: #500070;
 	padding: 10px 10px;
 	margin: 10px 10px;
-	width: 50%;
+	/* width: 50%; */
 	margin-left: auto;
 	margin-right: auto;
 	cursor: pointer;
@@ -23,12 +24,12 @@ ul {
 .category > li {
 	display: inline-block;
 	vertical-align: middle;
-	width: 25%;
+	width: 150px;
 }
 
 .category > li:nth-child(2) {
-	margin-left: 15px;
-	margin-right: 15px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .subcategories {
