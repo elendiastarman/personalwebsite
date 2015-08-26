@@ -42,9 +42,8 @@ hr { border-color: gold; }
 	padding-left: 0;
 	display: block;
 	border: 1px solid;
-	/* position: absolute; */
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 525px) {
 	.listing-item {
 		text-align: center;
 	}
@@ -58,32 +57,16 @@ hr { border-color: gold; }
 	margin: 5px;
 	width: 23%;
 	min-width: 200px;
-	/* white-space: nowrap; */
-	/* position: relative; */
-	/* top: 0; */
-	/* overflow: hidden; */
 }
 .listing-item img {
 	max-height: 150px;
-	/* vertical-align: middle; */
-	/* top: 0; */
 }
 
-.help {
+.vertical-align-help {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
 }
-/* .listing-item > li:first-child { */
-/* .topit {
-	top: 0;
-} */
-
-/* .helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-} */
 
 .listing-item > li:first-child {
 	font-weight: bold;

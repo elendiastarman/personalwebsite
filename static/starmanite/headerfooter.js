@@ -76,40 +76,12 @@ document.ready = function() {
 		$(elems[i]).parent().on('click', {url:url}, function(event){window.location.href = event.data.url});
 	}
 	
-	// var imgs = $('.listing-item > li');//, .listing-item > li > a');
-	// for (var i=0; i<imgs.length; i++) {
-		// $(imgs[i]).children[0].prepend($("<span class='helper'></span>"));
-	// }
-	
-	var uls = $('.listing-item');
-	console.log(uls);
-	// for (var i=0; i<uls.length; i++) {
 	$('.listing-item').each(function(i,e) {
-		// console.log(i);
-		// var y = e.getBoundingClientRect().top;
-		// console.log(y);
-		// debugger;
 		var lis = e.children;
-		// console.log(lis);
 		for (var j=0; j<lis.length; j++) {
-			// var y2 = lis[j].getBoundingClientRect().top;
-			// console.log(y-y2);
-			// lis[j].offsetTop = 6;
-			// console.log(lis[j].children[0].offsetBottom);
-			console.log(lis[j]);
-			lis[j].innerHTML = "<div class='help'>"+lis[j].innerHTML+"</div>";
+			lis[j].innerHTML = "<div class='vertical-align-help'>"+lis[j].innerHTML+"</div>";
 		}
 	});
-		// var lis = uls[i].children();
-		// var y = uls[i].getBoundingRectangle().top();
-		// console.log(i);
-		// console.log(uls[i]);
-		// console.log(y);
-		
-		// for (var j=0; j<lis.length; j++) {
-			
-		// }
-	// }
 	
 	$(document).keydown();
 };
