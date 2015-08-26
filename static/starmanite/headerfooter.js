@@ -69,15 +69,11 @@ $(document).keydown(function(event) {
 });
 
 document.ready = function() {
-	var elems = $('.listing-item > li:first-child').children('a');
+	var elems = $('.listing-item > li').children('a');
 	for (var i=0; i<elems.length; i++) {
 		$(elems[i]).parent().addClass('clickable');
 		var url = elems[i].href;
-		$(elems[i]).parent().on('click', {url:url}, function(event){gotoURL( event.data.url )});
+		$(elems[i]).parent().on('click', {url:url}, function(event){window.location.href = event.data.url});
 	}
 	$(document).keydown();
 };
-
-function gotoURL(url){
-	window.location.href = url;
-}
