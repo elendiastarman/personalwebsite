@@ -17,18 +17,16 @@ hr { border-color: gold; }
 
 .tabs {
 	padding-left: 0px;
-	display: table;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
 }
 .tabs > li {
-	display: table-cell;
-	/* font-size: 1.75vw; */
+	display: inline-block;
 	font-weight: bold;
 	text-align: center;
-	border-left: 1px solid;
-	width: 1%;
-}
-.tabs > li:first-child {
-	border-left: 0px;
+	width: 150px;
+	margin-bottom: 5px;
 }
 
 .listing {
