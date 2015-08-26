@@ -43,7 +43,7 @@ hr { border-color: gold; }
 	display: block;
 	border: 1px solid;
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 522px) {
 	.listing-item {
 		text-align: center;
 	}
