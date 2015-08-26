@@ -20,15 +20,14 @@
 		<ul class="listing">
 			<li><ul class="listing-item">
 				<li>About</li>
-				<li><a href="{% url 'index:contact' %}">
-					Contact
+				<li>
+					<a href="{% url 'index:contact' %}">Contact</a>
 					<br/>
 					<img src="{% static 'starmanite/atSymbol.png' %}"/>
-				</a></li>
-				<li style="align-items: initial;"><a href="{% url 'index:resume' %}">
-					Current Resume
+				</li>
+				<li>
+					<a href="{% url 'index:resume' %}">Current Resume</a>
 					<br/><br/>
-					
 					<ul style="text-align: left;">
 						<li>Work experience</li>
 						<li>Education</li>
@@ -36,7 +35,8 @@
 						<li>Programming skills</li>
 						<li>Mathematics expertise</li>
 					</ul>
-				</a></li>
+					<br style="line-height: 22px;"/>
+				</li>
 			</ul></li>
 		</ul>
 	{% endblock %}

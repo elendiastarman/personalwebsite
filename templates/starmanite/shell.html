@@ -9,7 +9,6 @@
 		
 		{% load staticfiles %}
 		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/shell.css' %}" />
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	
 		{% block head %}{% endblock %}
 	</head>
@@ -27,5 +26,8 @@
 			{% block body %}{% endblock %}
 		</div>
 
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		{% block scripts %}
+		{% endblock %}
 	</body>
 </html>

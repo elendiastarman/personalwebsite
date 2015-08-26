@@ -3,7 +3,6 @@
 {% block head %}
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static 'starmanite/headerfooter.css' %}" />
-	<script type="text/javascript" src="{% static 'starmanite/headerfooter.js' %}"></script>
 	
 	{% block stylingAndScripts %}
 	{% endblock %}
@@ -24,4 +23,8 @@
 		{% block main %}
 		{% endblock %}
 	</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'starmanite/headerfooter.js' %}"></script>
 {% endblock %}

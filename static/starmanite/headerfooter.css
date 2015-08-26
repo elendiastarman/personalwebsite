@@ -42,6 +42,7 @@ hr { border-color: gold; }
 	padding-left: 0;
 	display: block;
 	border: 1px solid;
+	/* position: absolute; */
 }
 @media screen and (max-width: 550px) {
 	.listing-item {
@@ -53,14 +54,36 @@ hr { border-color: gold; }
 	display: inline-block;
 	text-align: center;
 	border: 1px solid transparent;
-	height: 150px;
+	max-height: 150px;
 	margin: 5px;
 	width: 23%;
 	min-width: 200px;
+	/* white-space: nowrap; */
+	/* position: relative; */
+	/* top: 0; */
+	/* overflow: hidden; */
 }
 .listing-item img {
-	max-height: 125px;
+	max-height: 150px;
+	/* vertical-align: middle; */
+	/* top: 0; */
 }
+
+.help {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+/* .listing-item > li:first-child { */
+/* .topit {
+	top: 0;
+} */
+
+/* .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+} */
 
 .listing-item > li:first-child {
 	font-weight: bold;
@@ -72,6 +95,9 @@ hr { border-color: gold; }
 .listing-item > li:last-child {
 }
 
+.clickable img {
+	max-height: 125px;
+}
 .clickable:hover {
 	border: 1px solid gold;
 	background-color: #ffa;
