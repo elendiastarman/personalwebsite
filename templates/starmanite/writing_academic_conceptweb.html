@@ -138,7 +138,7 @@
 
 {% block scripts %}
 <script type="text/javascript">
-	$('.show').each(function() {console.log(this); $(this).toggle();});
+	$('.show').each(function() {$(this).toggle();});
 	function toggleVisibility() {
 		$('.show, .hide').each(function() {$(this).toggle();});
 	}
