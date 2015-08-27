@@ -12,7 +12,7 @@
 {% block content %}
 	<div id="content">
 	
-		<p><em>Note: I gave a PowerPoint presentation on this (available to <a href="{% static 'starmanite/philosophyPPT/ConceptLabelWebPowerpoint.ppt' %}" target="_blank">download</a>) and made diagrams that demonstrate what I'm talking about. If you would like to <span class="show">see</span><span class="hide">hide</span> them, click this button: </em>
+		<p><em>Note: I gave a PowerPoint presentation on this (available to <a href="{% static 'starmanite/philosophyPPT/ConceptLabelWebPowerpoint.ppt' %}" target="_blank">download</a>) and made diagrams that demonstrate what I'm talking about, which I've included. If you would like to <span class="show">see</span><span class="hide">hide</span> them, click this button: </em>
 		<button onclick="toggleVisibility()"><span class="show">show</span><span class="hide">hide</span> diagrams</button></p>
 	
 		<h2>A Concept-Web Model of Language</h2>
@@ -138,7 +138,7 @@
 
 {% block scripts %}
 <script type="text/javascript">
-	$('.hide').each(function() {console.log(this); $(this).toggle();});
+	$('.show').each(function() {console.log(this); $(this).toggle();});
 	function toggleVisibility() {
 		$('.show, .hide').each(function() {$(this).toggle();});
 	}
