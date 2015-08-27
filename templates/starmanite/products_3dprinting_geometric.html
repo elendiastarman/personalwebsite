@@ -1,0 +1,18 @@
+{% extends 'starmanite/products_3dprinting.html' %}
+
+{% load staticfiles %}
+{% block stylingAndScripts %}
+{% endblock %}
+
+{% block path3 %} > <a href="{% url 'index:geometric' %}">Geometric Designs</a>{% block path4 %}{% endblock %}{% endblock %}
+
+{% block content %}
+	<div id="content">
+	
+		<p>At the moment, I have not 3D printed very much, except for a ring, which I show below.</p>
+		
+		<img src="{% static 'starmanite/LeeBurnette_braidRing_snapshot.png' %}" alt="3D model of braided ring with three strands" width="400px" height="300px" />
+		<img src="{% static 'starmanite/braidRingCloseup.jpg' %}" alt="3D printed braided ring in purple plastic" height="300px" />
+	
+	</div>
+{% endblock %}
