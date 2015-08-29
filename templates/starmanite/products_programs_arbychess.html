@@ -2,21 +2,28 @@
 
 {% load staticfiles %}
 {% block stylingAndScripts %}
+<style>
+	.section {font-size: 14pt; font-weight: bold;}
+</style>
 {% endblock %}
 
 {% block path3 %} > <a href="{% url 'index:arbychess' %}">ArbyChess</a>{% block path4 %}{% endblock %}{% endblock %}
 
 {% block content %}
-	<div id="content">
-		<ul>
-			<li><a href="#inspiration">Inspiration</a></li>
+	<div id="content"><!-- 
+		<ul style="font-size: 16pt;">
+			<li><a href="#purpose">Purpose</a></li>
 			<li><a href="#design">Design</a></li>
 			<li><a href="#techniques">Coding Techniques</a></li>
 		</ul>
 		
-		<hr/>
+		<hr/> -->
 		
-		<p id="inspiration" class="section"><a href="#inspiration">Inspiration</a></p>
+		<p id="purpose" class="section"><a href="#purpose">Purpose</a></p>
+		
+		<p>What if you could move pieces twice in a row? What if you could move a piece off one side of the board and have it reappear on the opposite side? What if instead of rooks, bishops, and knights, you had queens and instead of the regular queen, you had a <em>super</em>-queen? What if you wanted to play <em>hexagonal</em> chess?</p>
+		
+		<p>All these, and more, are possible with <strong>ArbyChess</strong>!</p>
 		
 		<p>A couple years ago, I decided to write a chess engine. But not just a simple, ordinary chess game. I deemed that too easy and simple. 
 		I wanted a challenge, so I decided to make a chess <em>engine</em> that could handle arbitrary boards, pieces, and moves. Thus, ArbyChess 
@@ -24,6 +31,8 @@
 		
 		<p>A .zip file containing the executable and the necessary files to play chess can be downloaded from here: 
 		<a href="{% static 'starmanite/ArbyChess_v0.8.9.zip' %}">ArbyChess_v0.8.9.zip</a>.</p>
+		
+		<p>I would love to keep working on this project, but I am currently job-less. If you would like to fund the development of this chess engine, I would love that. Please <a href="{% url 'index:contact' %}">contact</a> me about that if you have such an offer!</p>
 		
 		<hr/>
 		
