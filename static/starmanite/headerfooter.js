@@ -50,7 +50,14 @@ document.ready = function() {
 	for (var i=0; i<elems.length; i++) {
 		$(elems[i]).parent().addClass('clickable');
 		var url = elems[i].href;
-		$(elems[i]).parent().on('click', {url:url}, function(event){window.location.href = event.data.url});
+		$(elems[i]).parent().on('click', {url:url}, function(event){
+			if (event.which == 1) {
+				window.location.href = event.data.url;
+			} else if (event.which == 2) {
+				event.preventDefault();
+				$('a').attr('href',event.data.url).attr('target','_blank')[0].click();
+			}
+		});
 	}
 	
 	$('.listing-item').each(function(i,e) {
