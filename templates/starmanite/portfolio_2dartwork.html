@@ -6,6 +6,15 @@
 
 {% block path2 %} > <a href="{% url 'index:2dartwork' %}">2D Artwork</a>{% block path3 %}{% endblock %}{% endblock %}
 
+{% block tabs %}
+	<ul class="tabs">
+		<li><a href="{% url 'index:doodles' %}">Doodles</a></li>
+		<li><a href="{% url 'index:sprites' %}">Sprite Comics</a></li>
+		<li><a href="{% url 'index:art-misc' %}">Miscellaneous</a></li>
+	</ul>
+	<hr/>
+{% endblock %}
+
 {% block content %}
 	<ul class="listing">
 		<li><ul class="listing-item">
