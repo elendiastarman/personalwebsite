@@ -1,6 +1,24 @@
 {% extends 'starmanite/headerfooter.html' %}
 
 {% load staticfiles %}
+{% block styling %}
+	{{ block.super }}
+	
+	<style>
+		p {
+			text-align: justify;
+			<!-- display: block; -->
+			<!-- height: 150px; -->
+			<!-- overflow: hidden; -->
+		}
+		.listing-item li {
+			overflow: auto;
+		}
+		.listing-item li:first-child {
+			overflow: hidden;
+		}
+	</style>
+{% endblock %}
 
 {% block path %}<a href="{% url 'index:writing' %}">Writing</a>{% endblock %}
 
@@ -31,12 +49,12 @@
 			<li>
 				<a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a>
 				<br/>
-				<p style="text-align: justify;">"Well," Lumien began, "I didn't always look like this. In fact, my appearance changed drastically many years ago. But that is getting ahead of myself. Come closer and listen to this yarn, the adventure of my youth."</p>
+				<p>"Well," Lumien began, "I didn't always look like this. In fact, my appearance changed drastically many years ago. But that is getting ahead of myself. Come closer and listen to this yarn, the adventure of my youth."</p>
 			</li>
 			<li style="width: 25%;">
 				<a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a>
 				<br/>
-				<p style="text-align: justify;">I was a bit perplexed by how my characters seemed to be interacting.with me. After all, weren’t they figments of my imagination?<br/><br/><br/></p>
+				<p>I was a bit perplexed by how my characters seemed to be interacting.with me. After all, weren’t they figments of my imagination?<br/><br/><br/></p>
 			</li>
 		</ul></li>
 		
@@ -45,7 +63,7 @@
 			<li>
 				<a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a>
 				<br/>
-				<p style="text-align: justify;">The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.</p>
+				<p>The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.</p>
 			</li>
 		</ul></li>
 	</ul>
