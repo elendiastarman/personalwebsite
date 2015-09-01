@@ -1,7 +1,9 @@
 {% extends 'starmanite/shell.html' %}
 
-{% block head %}		
-	{% load staticfiles %}
+{% load staticfiles %}
+{% block styling %}
+	{{ block.super }}
+	
 	<link rel="stylesheet" type="text/css" href="{% static 'starmanite/home.css' %}" />
 {% endblock %}
 
@@ -21,7 +23,7 @@
 					</ul>
 				</li>
 				<li>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					<img src="{% static 'starmanite/arbychessHexagonalChess_screenshot.png' %}" alt="ArbyChess hexagonal chess screenshot" width="125px" height="125px" />
 				</li>
 			</ul>
 		</li>
@@ -43,7 +45,7 @@
 					</ul>
 				</li>
 				<li>
-					<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px"/>
+					<img src="{% static 'starmanite/portfolio_thumbnail.png' %}" alt="portfolio thumbnail" width="125px" height="125px" />
 				</li>
 			</ul>
 		</li>
@@ -62,7 +64,7 @@
 					</ul>
 				</li>
 				<li>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					<img src="{% static 'starmanite/hyperbolicGeometry_triheptagonalTiling_thumbnail.png' %}" alt="triheptagonal tiling" width="125px" height="125px" />
 				</li>
 			</ul>
 		</li>
@@ -80,7 +82,7 @@
 					</ul>
 				</li>
 				<li>
-					<img src="{% static 'starmanite/placeholder_small.png' %}" alt="placeholder image"/>
+					<img src="{% static 'starmanite/atSymbol.png' %}" alt="curly at symbol" width="125px" height="125px" />
 				</li>
 			</ul>
 		</li>
