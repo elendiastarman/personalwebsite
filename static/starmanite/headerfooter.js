@@ -60,11 +60,11 @@ document.ready = function() {
 		});
 	}
 	
-	$('.listing-item').each(function(i,e) {
-		var lis = e.children;
-		for (var j=0; j<lis.length; j++) {
-			lis[j].innerHTML = "<div class='vertical-align-help'>"+lis[j].innerHTML+"</div>";
-		}
+	$('.listing-item > li').has('img').each(function(i,e) {
+		e.innerHTML = "<div class='vertical-align-help-middle'>"+e.innerHTML+"</div>";
+	});
+	$('.listing-item > li').has('p').each(function(i,e) {
+		e.innerHTML = "<div class='vertical-align-help-top'>"+e.innerHTML+"</div>";
 	});
 	
 	$(document).keydown();

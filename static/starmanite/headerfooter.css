@@ -62,10 +62,24 @@ hr { border-color: gold; }
 	max-height: 150px;
 }
 
-.vertical-align-help {
+.text-excerpt {
+	max-height: none !important;
+	min-height: 150px;
+}
+.text-excerpt p {
+	text-align: justify;
+	margin: 0;
+}
+
+.vertical-align-help-middle {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
+}
+.vertical-align-help-top {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
 }
 
 .listing-item > li:first-child {
@@ -74,8 +88,6 @@ hr { border-color: gold; }
 	vertical-align: top;
 	padding-top: 65px;
 	padding-bottom: 85px;
-}
-.listing-item > li:last-child {
 }
 
 .clickable img {
