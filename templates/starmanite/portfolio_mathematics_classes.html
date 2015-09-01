@@ -1,52 +1,44 @@
 {% extends 'starmanite/portfolio_mathematics.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:math-classes' %}">Classes</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:math-classes' %}">Classes</a>{% endblock %}
 
 {% block content %}
-	<div id="content">
+	<p><strong>Rochester Institute of Technology</strong></p>
 	
-		<p id="classes" class="section"><a href="#classes">Classes</a></p>
-		
-		<p><strong>Rochester Institute of Technology</strong></p>
-		
-		<ul>
-			<li>Discrete Math I, II</li>
-			<li>Linear Algebra I, II</li>
-			<li>Graph Theory</li>
-			<li>Probability</li>
-			<li>Real Variables I, II</li>
-			<li>Differential Equations I</li>
-			<li>Applied Statistics</li>
-			<li>Mathematical Modelling</li>
-			<li>Numerical Analysis</li>
-			<li>Vector Calculus</li>
-			<li>Abstract Algebra I, II</li>
-			<li><em>Credit By Exam:</em> Multivariable Calculus</li>
-		</ul>
-		
-		<p><strong>North Carolina School of Science and Mathematics</strong></p>
-		
-		<ul>
-			<li>AP Calculus BC</li>
-			<li>Finite Mathematics</li>
-			<li>Modelling and Differential Equations</li>
-			<li>Multivariable and Vector Calculus</li>
-			<li>Numerical Analysis</li>
-			<li>Combinatorics and Game Theory</li>
-			<li>Graph Theory</li>
-		</ul>
-		
-		<p><strong>Northern Guilford High School</strong></p>
-		
-		<ul>
-			<li>Algebra II</li>
-			<li>AP Statistics</li>
-			<li>AP Calculus AB</li>
-		</ul>
-
-	</div>
+	<ul>
+		<li>Discrete Math I, II</li>
+		<li>Linear Algebra I, II</li>
+		<li>Graph Theory</li>
+		<li>Probability</li>
+		<li>Real Variables I, II</li>
+		<li>Differential Equations I</li>
+		<li>Applied Statistics</li>
+		<li>Mathematical Modelling</li>
+		<li>Numerical Analysis</li>
+		<li>Vector Calculus</li>
+		<li>Abstract Algebra I, II</li>
+		<li><em>Credit By Exam:</em> Multivariable Calculus</li>
+	</ul>
+	
+	<p><strong>North Carolina School of Science and Mathematics</strong></p>
+	
+	<ul>
+		<li>AP Calculus BC</li>
+		<li>Finite Mathematics</li>
+		<li>Modelling and Differential Equations</li>
+		<li>Multivariable and Vector Calculus</li>
+		<li>Numerical Analysis</li>
+		<li>Combinatorics and Game Theory</li>
+		<li>Graph Theory</li>
+	</ul>
+	
+	<p><strong>Northern Guilford High School</strong></p>
+	
+	<ul>
+		<li>Algebra II</li>
+		<li>AP Statistics</li>
+		<li>AP Calculus AB</li>
+	</ul>
 {% endblock %}

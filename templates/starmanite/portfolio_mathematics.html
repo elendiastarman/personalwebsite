@@ -1,10 +1,17 @@
 {% extends 'starmanite/portfolio.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:mathematics' %}">Mathematics</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:mathematics' %}">Mathematics</a>{% endblock %}
+
+{% block tabs %}
+	{{ block.super }}
+	
+	<ul class="tabs">
+		<li><a href="{% url 'index:math-rec' %}">Recreational</a></li>
+		<li><a href="{% url 'index:math-classes' %}">Classes</a></li>
+	</ul>
+{% endblock %}
 
 {% block content %}
 	<ul class="listing">

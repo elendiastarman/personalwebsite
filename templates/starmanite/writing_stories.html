@@ -1,10 +1,17 @@
 {% extends 'starmanite/writing.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:stories' %}">Stories</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:stories' %}">Stories</a>{% endblock %}
+
+{% block tabs %}
+	{{ block.super }}
+	
+	<ul class="tabs">
+		<li><a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a></li>
+		<li><a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a></li>
+	</ul>
+{% endblock %}
 
 {% block content %}
 	<ul class="listing">

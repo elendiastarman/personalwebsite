@@ -1,47 +1,41 @@
 {% extends 'starmanite/headerfooter.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path %}<a href="{% url 'index:information' %}">Information</a>{% block path2 %}{% endblock %}{% endblock %}
+{% block path %}<a href="{% url 'index:information' %}">Information</a>{% endblock %}
 
-{% block main %}
+{% block tabs %}
+	{{ block.super }}
+	
 	<ul class="tabs">
 		<li><a href="{% url 'index:contact' %}">{% block contact %}Contact{% endblock %}</a></li>
 		<li><a href="{% url 'index:resume' %}">{% block resume %}Resume{% endblock %}</a></li>
 	</ul>
 	
 	<hr/>
-	<br/>
+{% endblock %}
 
-	<div id="content">
-	{% block content %}
-		<ul class="listing">
-			<li><ul class="listing-item">
-				<li>About</li>
-				<li>
-					<a href="{% url 'index:contact' %}">Contact</a>
-					<br/>
-					<img src="{% static 'starmanite/atSymbol.png' %}" alt="curly at symbol"/>
-				</li>
-				<li>
-					<a href="{% url 'index:resume' %}">Current Resume</a>
-					<br/><br/>
-					<ul style="text-align: left;">
-						<li>Work experience</li>
-						<li>Education</li>
-						<li>Portfolio highlights</li>
-						<li>Programming skills</li>
-						<li>Mathematics expertise</li>
-					</ul>
-					<br style="line-height: 22px;"/>
-				</li>
-			</ul></li>
-		</ul>
-	{% endblock %}
-	</div>
-
-	<br/>
-	<hr/>
+{% block content %}
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li>About</li>
+			<li>
+				<a href="{% url 'index:contact' %}">Contact</a>
+				<br/>
+				<img src="{% static 'starmanite/atSymbol.png' %}" alt="curly at symbol"/>
+			</li>
+			<li>
+				<a href="{% url 'index:resume' %}">Current Resume</a>
+				<br/><br/>
+				<ul style="text-align: left;">
+					<li>Work experience</li>
+					<li>Education</li>
+					<li>Portfolio highlights</li>
+					<li>Programming skills</li>
+					<li>Mathematics expertise</li>
+				</ul>
+				<br style="line-height: 22px;"/>
+			</li>
+		</ul></li>
+	</ul>
 {% endblock %}

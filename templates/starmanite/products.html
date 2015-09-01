@@ -1,69 +1,62 @@
 {% extends 'starmanite/headerfooter.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path %}<a href="{% url 'index:products' %}">Products</a>{% block path2 %}{% endblock %}{% endblock %}
+{% block path %}<a href="{% url 'index:products' %}">Products</a>{% endblock %}
 
-{% block main %}
+{% block tabs %}
+	{{ block.super }}
+	
 	<ul class="tabs">
 		<li><a href="{% url 'index:programs' %}">{% block programs %}Programs{% endblock %}</a></li>
 		<li><a href="{% url 'index:3dprinting' %}">{% block 3dprinting %}3D Printing{% endblock %}</a></li>
 		<li><a href="{% url 'index:commissions' %}">{% block commissions %}Commissions{% endblock %}</a></li>
 	</ul>
-
 	<hr/>
-	<br/>
+{% endblock %}
 
-	<div id="content">
-	{% block content %}
-		<ul class="listing">
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:programs' %}">Programs</a></li>
-				<li><a href="{% url 'index:arbychess' %}">
-					ArbyChess
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-				<li><a href="{% url 'index:spinningtop' %}">
-					Spinning Top Simulator
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-				<li><a href="{% url 'index:programs' %}">
-					More
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-			</ul></li>
-			
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
-				<li><a href="{% url 'index:geometric' %}">
-					Geometric Designs
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-			</ul></li>
+{% block content %}
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:programs' %}">Programs</a></li>
+			<li><a href="{% url 'index:arbychess' %}">
+				ArbyChess
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+			<li><a href="{% url 'index:spinningtop' %}">
+				Spinning Top Simulator
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+			<li><a href="{% url 'index:programs' %}">
+				More
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:3dprinting' %}">3D Printing</a></li>
+			<li><a href="{% url 'index:geometric' %}">
+				Geometric Designs
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+		</ul></li>
 
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:commissions' %}">Commissions</a></li>
-				<li><a href="{% url 'index:trinkets' %}">
-					Code Trinkets
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-				<li><a href="{% url 'index:3dmodels' %}">
-					3D Models
-					<br/>
-					<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
-				</a></li>
-			</ul></li>
-		</ul>
-	{% endblock %}
-	</div>
-
-	<br/>
-	<hr/>
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:commissions' %}">Commissions</a></li>
+			<li><a href="{% url 'index:trinkets' %}">
+				Code Trinkets
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+			<li><a href="{% url 'index:3dmodels' %}">
+				3D Models
+				<br/>
+				<img src="{% static 'placeholder_small.png' %}" alt="placeholder image" />
+			</a></li>
+		</ul></li>
+	</ul>
 {% endblock %}

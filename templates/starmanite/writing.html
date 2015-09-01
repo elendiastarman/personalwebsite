@@ -1,59 +1,52 @@
 {% extends 'starmanite/headerfooter.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path %}<a href="{% url 'index:writing' %}">Writing</a>{% block path2 %}{% endblock %}{% endblock %}
+{% block path %}<a href="{% url 'index:writing' %}">Writing</a>{% endblock %}
 
-{% block main %}
+{% block tabs %}
+	{{ block.super }}
+	
 	<ul class="tabs">
 		<li><a href="{% url 'index:blog' %}">{% block blog %}Blog{% endblock %}</a></li>
 		<li><a href="{% url 'index:stories' %}">{% block stories %}Stories{% endblock %}</a></li>
 		<li><a href="{% url 'index:academic' %}">{% block academic %}Academic{% endblock %}</a></li>
 	</ul>
-
 	<hr/>
-	<br/>
+{% endblock %}
 
-	<div id="content">
-	{% block content %}
-		<ul class="listing">
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:blog' %}">Blog</a></li>
-				<li><a href="http://www.starmaninnovations.com/blog/category/hyperbolic-geometry/">
-					Hyperbolic Geometry
-					<br/>
-					<img src="{% static 'starmanite/hyperbolicGeometry_grid_thumbnail.png' %}" alt="hyperbolic geometry grid thumbnail" />
-				</a></li>
-			</ul></li>
-			
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:stories' %}">Stories</a></li>
-				<li>
-					<a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a>
-					<br/>
-					<p style="text-align: justify;">"Well," Lumien began, "I didn't always look like this. In fact, my appearance changed drastically many years ago. But that is getting ahead of myself. Come closer and listen to this yarn, the adventure of my youth."</p>
-				</li>
-				<li style="width: 25%;">
-					<a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a>
-					<br/>
-					<p style="text-align: justify;">I was a bit perplexed by how my characters seemed to be interacting.with me. After all, weren’t they figments of my imagination?<br/><br/><br/></p>
-				</li>
-			</ul></li>
-			
-			<li><ul class="listing-item">
-				<li><a href="{% url 'index:academic' %}">Academic</a></li>
-				<li>
-					<a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a>
-					<br/>
-					<p style="text-align: justify;">The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.</p>
-				</li>
-			</ul></li>
-		</ul>
-	{% endblock %}
-	</div>
-	
-	<br/>
-	<hr/>
+{% block content %}
+	<ul class="listing">
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:blog' %}">Blog</a></li>
+			<li><a href="http://www.starmaninnovations.com/blog/category/hyperbolic-geometry/">
+				Hyperbolic Geometry
+				<br/>
+				<img src="{% static 'starmanite/hyperbolicGeometry_grid_thumbnail.png' %}" alt="hyperbolic geometry grid thumbnail" />
+			</a></li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:stories' %}">Stories</a></li>
+			<li>
+				<a href="{% url 'index:lumien-story' %}">Lumien and the Seven Relics</a>
+				<br/>
+				<p style="text-align: justify;">"Well," Lumien began, "I didn't always look like this. In fact, my appearance changed drastically many years ago. But that is getting ahead of myself. Come closer and listen to this yarn, the adventure of my youth."</p>
+			</li>
+			<li style="width: 25%;">
+				<a href="{% url 'index:figments' %}">No Longer Figments of the Imagination</a>
+				<br/>
+				<p style="text-align: justify;">I was a bit perplexed by how my characters seemed to be interacting.with me. After all, weren’t they figments of my imagination?<br/><br/><br/></p>
+			</li>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:academic' %}">Academic</a></li>
+			<li>
+				<a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a>
+				<br/>
+				<p style="text-align: justify;">The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.</p>
+			</li>
+		</ul></li>
+	</ul>
 {% endblock %}

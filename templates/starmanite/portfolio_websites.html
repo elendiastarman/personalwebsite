@@ -1,10 +1,8 @@
 {% extends 'starmanite/portfolio.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:websites' %}">Websites</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:websites' %}">Websites</a>{% endblock %}
 
 {% block content %}
 	<ul class="listing">

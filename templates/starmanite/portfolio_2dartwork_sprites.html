@@ -1,53 +1,47 @@
 {% extends 'starmanite/portfolio_2dartwork.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:sprites' %}">Sprites</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:sprites' %}">Sprites</a>{% endblock %}
 
 {% block content %}
-	<div id="content">
-		<div id="minitoc" style="float: right; border: 1px solid #500070; margin: 0px; padding: 20px;">
-			<p style="margin-top: 0px;">Mini table of contents</p>
-			<ul style="list-style-type: none; text-align: right; margin-top: 0px; margin-bottom: 0px;">
-				<li><a href="{% url 'index:doodles' %}">Doodles</a></li>
-				<li><strong>Sprite Comics</strong></li>
-				<li><a href="{% url 'index:art-misc' %}">Miscellaneous</a></li>
-			</ul>
-		</div>
+	<p><em>(Click for full size.)</em></p>
 	
-		<p id="sprites" class="section"><a href="#sprites">Sprite Comics</a></p>
-		
-		<p><em>(Click for full size.)</em></p>
-		
-		<p><strong>2008</strong><br/>
-		<a href="{% static 'starmanite/2D examples/Comic1_The_Grand_Entrance.1.1.PNG' %}" target="_blank"><img src="{% static 'starmanite/2D examples/Comic1_The_Grand_Entrance.1.1.PNG' %}" alt="the author's grand entrance" width="25%"/></a>
-		</a>
-		<br/>
-		<a href="{% static 'starmanite/2D examples/Comic2_The_First_Paradox.PNG' %}" target="_blank"><img src="{% static 'starmanite/2D examples/Comic2_The_First_Paradox.PNG' %}" alt="'do not read this' paradox" width="25%"/></a>
-		<br/>
-		
-		<hr/>
-		
-		<strong>2009</strong><br/>
-		<a href="{% static 'starmanite/2D examples/Comic3_The_Grandfather_Paradox.3_revision1.PNG' %}" target="_blank"><img src="{% static 'starmanite/2D examples/Comic3_The_Grandfather_Paradox.3_revision1.PNG' %}" alt="the grandfather paradox" width="25%"/></a>
-		<br/>
-		<a href="{% static 'starmanite/2D examples/Comic4_The_Unexpected_Hanging.3.PNG' %}" target="_blank"><img src="{% static 'starmanite/2D examples/Comic4_The_Unexpected_Hanging.3.PNG' %}" alt="the unexpected hanging paradox" width="25%"/></a>
-		<br/>
-		
-		<hr/>
-		
-		<strong>2010</strong><br/>
-		<a href="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}" target="_blank"><img src="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}" alt="I came, I saw....then I ran." width="25%"/></a>
-		</p>
-		
-		<hr/>
-		
-		<p><strong>Current sprite sheet:</strong><br/>
-		<a href="{% static 'starmanite/2D examples/LumienTH_V1.6_3_3.6.png' %}" target="_blank"><img src="{% static 'starmanite/2D examples/LumienTH_V1.6_3_3.6.png' %}" alt="current sprite sheet for Lumien the Hedgehog" width="25%"/></a>
-		<br/>
-		<em>Use only with permission.</em></p>
+	<p><strong>2008</strong><br/>
+	<img src="{% static 'starmanite/2D examples/Comic1_The_Grand_Entrance.1.1.PNG' %}" alt="the author's grand entrance" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Comic2_The_First_Paradox.PNG' %}" alt="'do not read this' paradox" width="25%"/>
+	
+	<hr/>
+	
+	<strong>2009</strong><br/>
+	<img src="{% static 'starmanite/2D examples/Comic3_The_Grandfather_Paradox.3_revision1.PNG' %}" alt="the grandfather paradox" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Comic4_The_Unexpected_Hanging.3.PNG' %}" alt="the unexpected hanging paradox" width="25%"/>
+	
+	<hr/>
+	
+	<strong>2010</strong><br/>
+	<img src="{% static 'starmanite/2D examples/LumienProtophos_1.png' %}" alt="I came, I saw....then I ran." width="25%"/>
+	</p>
+	
+	<hr/>
+	
+	<p><strong>Current sprite sheet:</strong><br/>
+	<img src="{% static 'starmanite/2D examples/LumienTH_V1.6_3_3.6.png' %}" alt="current sprite sheet for Lumien the Hedgehog" width="25%"/>
+	<br/>
+	<em>Use only with permission.</em></p>
+{% endblock %}
 
-	</div>
+{% block scripts %}
+	{{ block.super }}
+	<script type="text/javascript">
+		$('img').each(function(i,thing){
+			$(thing).on('click', function(){
+				if ($(this).attr('width') === '25%') {
+					$(this).attr('width','auto');
+				} else if ($(this).attr('width') === 'auto') {
+					$(this).attr('width','25%');
+				}
+			});
+		});
+	</script>
 {% endblock %}

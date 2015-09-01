@@ -1,90 +1,63 @@
 {% extends 'starmanite/portfolio_programming.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:prog-background' %}">Programming Background</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:prog-background' %}">Programming Background</a>{% endblock %}
 
 {% block content %}
-	<div id="content">
+	<p id="history" class="section"><a href="#history">History</a></p>
 	
-		<ul>
-			<li><a href="#history">History</a></li>
-			<li><a href="#classes">Classes</a></li>
-			<li><a href="#freetime">Free Time Activities</a></li>
-		</ul>
-		
-		<hr/>
-		
-		<p id="history" class="section"><a href="#history">History</a></p>
-		
-		<ul>
-			<li><strong>2006</strong> &ndash; I learned TI-BASIC on the TI-84 and I attempted to learn Java and C++ at around 14 years old.</li>
-			<li><strong>2006, Christmas</strong> &ndash; I received a book named Game Programming for Teens, from which I learned Blitz Basic 
-			(also known as Blitz 2D)</li>
-			<li><strong>2007, first half</strong> &ndash; I learned Python and started doing <a href="#freetime">ProjectEuler</a> problems.</li>
-			<li><strong>2007, July</strong> &ndash; I received the sequel named 3D Game Programming for Teens, from which I learned Blitz 3D.</li>
-			<li><strong>2007, second half</strong> &ndash; I created my first major programs, one in 2D that would later be called Fractal Mania, 
-			and one in 3D called SpaceWars3D, inspired by SpaceWar!.</li>
-			<li><strong>2010</strong> &ndash; I learned LaTeX and some more Java, as well as a little bit of C and Assembly.</li>
-			<li><strong>2011, summer</strong> &ndash; I learned seven web programming languages - HTML, CSS, PHP, JavaScript, SQL, XML, and Ajax.</li>
-			<li><strong>2012, second half</strong> &ndash; I learned some advanced Java.</li>
-			<li><strong>2012</strong> &ndash; I learned Lua, C, C++, and MIPS Assembly.</li>
-			<li><strong>2013</strong> &ndash; I learned Prolog.</li>
-			<li><strong>2014, first half</strong> &ndash; I went through a few CodeAcademy courses, including the ones for Ruby, jQuery, and PHP, within a month.</li>
-			<li><strong>2014, second half</strong> &ndash; I did Django's tutorial in a weekend and then spent the next three months developing an employee
-			scheduling website. My skills with Python, Django, HTML, CSS, and JavaScript improved considerably in that time.</li>
-		</ul>
-		
-		<p>Total number of languages so far: 14 or 16, depending on how you count Blitz 2D/3D and C/C++. For a table of my skill with each
-		programming language, see <a href="{% url 'index:current' %}">my current resume</a>.</p>
-		
-		<hr/>
-		
-		<p id="classes" class="section"><a href="#classes">Classes</a></p>
-		
-		<p><strong>Rochester Institute of Technology</strong></p>
-		
-		<ul>
-			<li>Advanced Java Programming</li>
-			<li>Computer Organization</li>
-			<li>Operating Systems I</li>
-			<li>Computer Science 4</li>
-			<li>Artificial Intelligence</li>
-		</ul>
-		
-		<p><strong>University of Washington</strong></p>
-		
-		<ul>
-			<li>Web Development</li>
-			<li>Introduction to Algorithms</li>
-		</ul>
-		
-		<p><strong>North Carolina School of Science and Mathematics</strong></p>
-		
-		<ul>
-			<li>AP Computer Science A</li>
-		</ul>
-		
-		<hr/>
+	<ul>
+		<li><strong>2006</strong> &ndash; I learned TI-BASIC on the TI-84 and I attempted to learn Java and C++ at around 14 years old.</li>
+		<li><strong>2006, Christmas</strong> &ndash; I received a book named Game Programming for Teens, from which I learned Blitz Basic (also known as Blitz 2D)</li>
+		<li><strong>2007, first half</strong> &ndash; I learned Python and started doing <a href="#freetime">ProjectEuler</a> problems.</li>
+		<li><strong>2007, July</strong> &ndash; I received the sequel named 3D Game Programming for Teens, from which I learned Blitz 3D.</li>
+		<li><strong>2007, second half</strong> &ndash; I created my first major programs, one in 2D that would later be called Fractal Mania, and one in 3D called SpaceWars3D, inspired by SpaceWar!.</li>
+		<li><strong>2010</strong> &ndash; I learned LaTeX and some more Java, as well as a little bit of C and Assembly.</li>
+		<li><strong>2011, summer</strong> &ndash; I learned seven web programming languages - HTML, CSS, PHP, JavaScript, SQL, XML, and Ajax.</li>
+		<li><strong>2012, second half</strong> &ndash; I learned some advanced Java.</li>
+		<li><strong>2012</strong> &ndash; I learned Lua, C, C++, and MIPS Assembly.</li>
+		<li><strong>2013</strong> &ndash; I learned Prolog.</li>
+		<li><strong>2014, first half</strong> &ndash; I went through a few CodeAcademy courses, including the ones for Ruby, jQuery, and PHP, within a month.</li>
+		<li><strong>2014, second half</strong> &ndash; I did Django's tutorial in a weekend and then spent the next three months developing an employee scheduling website. My skills with Python, Django, HTML, CSS, and JavaScript improved considerably in that time.</li>
+	</ul>
+	
+	<p>Total number of languages so far: 14 or 16, depending on how you count Blitz 2D/3D and C/C++. For a table of my skill with each programming language, please see <a href="{% url 'index:resume' %}">my current resume</a>.</p>
+	
+	<hr/>
+	
+	<p id="classes" class="section"><a href="#classes">Classes</a></p>
+	
+	<p><strong>Rochester Institute of Technology</strong></p>
+	
+	<ul>
+		<li>Advanced Java Programming</li>
+		<li>Computer Organization</li>
+		<li>Operating Systems I</li>
+		<li>Computer Science 4</li>
+		<li>Artificial Intelligence</li>
+	</ul>
+	
+	<p><strong>University of Washington</strong></p>
+	
+	<ul>
+		<li>Web Development</li>
+		<li>Introduction to Algorithms</li>
+	</ul>
+	
+	<p><strong>North Carolina School of Science and Mathematics</strong></p>
+	
+	<ul>
+		<li>AP Computer Science A</li>
+	</ul>
+	
+	<hr/>
 
-		<p id="freetime" class="section"><a href="#freetime">Free Time Activities</a></p>
-		
-		<p><strong>Small, standalone programs</strong> comprise the great majority of the programs I write, and I write them just to try out one idea 
-		or another. Occasionally though, I will produce a large and significant program, the best of which I have listed above. I typically have two 
-		or three large programs in progress at any given time that I come back to again and again. The main programming language I use for these 
-		projects is Blitz 2D/3D, which is a game engine. As such, it is good for graphical stuff, although in terms of programming flexibility, 
-		it is definitely lacking compared to Python or Lua.
-		</p>
-		
-		<p><strong><a href="http://www.projecteuler.net">ProjectEuler</a></strong> is a hobby of mine, and at the moment, I have 112 problems solved,
-		18 of which are after the first 100. ProjectEuler was largely responsible for the programming knowledge and experience I amassed as the problems
-		require both math and programming to solve. The parameters are too large to brute-force, which is why math comes in, and the parameters are also
-		so large as to make human hand-calculation effectively impossible, thus a computer is required to do the calculations. Through this website,
-		I taught myself a year's worth of college-level programming and more. Python is the main language I use to solve these problems as it is my
-		"number crunching" language, which unfortunately also makes it inferior to languages such as Blitz 2D/3D when it comes to graphical stuff.
-		</p>
-
-	</div>
+	<p id="freetime" class="section"><a href="#freetime">Free Time Activities</a></p>
+	
+	<p><strong>Small, standalone programs</strong> comprise the great majority of the programs I write, and I write them just to try out one idea or another. Occasionally though, I will produce a large and significant program, the best of which I have listed above. I typically have two or three large programs in progress at any given time that I come back to again and again. The main programming language I use for these projects is Blitz 2D/3D, which is a game engine. As such, it is good for graphical stuff, although in terms of programming flexibility, it is definitely lacking compared to Python or Lua.
+	</p>
+	
+	<p><strong><a href="http://www.projecteuler.net">ProjectEuler</a></strong> is a hobby of mine, and at the moment, I have 112 problems solved, 18 of which are after the first 100. ProjectEuler was largely responsible for the programming knowledge and experience I amassed as the problems require both math and programming to solve. The parameters are too large to brute-force, which is why math comes in, and the parameters are also so large as to make human hand-calculation effectively impossible, thus a computer is required to do the calculations. Through this website, I taught myself a year's worth of college-level programming and more. Python is the main language I use to solve these problems as it is my "number crunching" language, which unfortunately also makes it inferior to languages such as Blitz 2D/3D when it comes to graphical stuff.
+	</p>
 {% endblock %}

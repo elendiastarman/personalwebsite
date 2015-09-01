@@ -1,18 +1,19 @@
 {% extends "starmanite/information.html" %}
 
-{% block stylingAndScripts %}
-		<style>
-			.paper { background-color: white; color: black; font-family: "Arial", Arial, san-serif; }
-			.paper a { color: black; }
-			.paper h3 { font-weight: bold; margin-bottom: 0px;}
-			.paper ul { margin-top: 0px; }
-			.experience { border: 1px solid black; width: 100%; border-collapse: collapse; }
-			.experience td, th { border-left: 1px solid black; width: 33%; }
-			.experience th { border-bottom: 1px solid black; text-align: left; }
-		</style>
+{% block styling %}
+	{{ block.super }}
+	<style>
+		.paper { background-color: white; color: black; font-family: "Arial", Arial, san-serif; }
+		.paper a { color: black; }
+		.paper h3 { font-weight: bold; margin-bottom: 0px;}
+		.paper ul { margin-top: 0px; }
+		.experience { border: 1px solid black; width: 100%; border-collapse: collapse; }
+		.experience td, th { border-left: 1px solid black; width: 33%; }
+		.experience th { border-bottom: 1px solid black; text-align: left; }
+	</style>
 {% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:resume' %}">Resume</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:resume' %}">Resume</a>{% endblock %}
 
 {% block content %}
 	<div class="paper" style="width: 670px; margin-left: auto; margin-right: auto; border: 1px solid black; padding: 80px;">

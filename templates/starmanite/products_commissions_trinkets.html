@@ -1,28 +1,22 @@
 {% extends 'starmanite/products_commissions.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:trinkets' %}">Code Trinkets</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:trinkets' %}">Code Trinkets</a>{% endblock %}
 
 {% block content %}
-	<div id="content">
+	<p>"Code trinkets" are essentially small pieces of code or small programs that do something simple. I have many such ideas, and I'll provide links to them if and when I get around to doing them. If you have an idea you would like me to program (or if you want me to work on one of these ideas), please feel free to <a href="{% url 'index:contact' %}">contact</a> me to talk about it.</p>
 	
-		<p>"Code trinkets" are essentially small pieces of code or small programs that do something simple. I have many such ideas, and I'll provide links to them if and when I get around to doing them. If you have an idea you would like me to program (or if you want me to work on one of these ideas), please feel free to <a href="{% url 'index:contact' %}">contact</a> me to talk about it.</p>
-		
-		<p>My current list of code trinkets ideas:</p>
-		
-		<ul>
-			<li><a href="http://www.brainwright.com/products/display/8304-2" target="_blank">Plexi</a> solver</li>
-			<li>9x9 L puzzle</li>
-			<li>Related Pythagorean triples</li>
-			<li>Diff timeline</li>
-			<li>Famine preparation calculator</li>
-			<li>Truck trailer simulator</li>
-			<li>Traffic simulator</li>
-			<li>Freeze tag simulation</li>
-		</ul>
+	<p>My current list of code trinkets ideas:</p>
 	
-	</div>
+	<ul>
+		<li><a href="http://www.brainwright.com/products/display/8304-2" target="_blank">Plexi</a> solver</li>
+		<li>9x9 L puzzle</li>
+		<li>Related Pythagorean triples</li>
+		<li>Diff timeline</li>
+		<li>Famine preparation calculator</li>
+		<li>Truck trailer simulator</li>
+		<li>Traffic simulator</li>
+		<li>Freeze tag simulation</li>
+	</ul>
 {% endblock %}

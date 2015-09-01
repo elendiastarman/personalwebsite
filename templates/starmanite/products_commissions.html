@@ -1,10 +1,17 @@
 {% extends 'starmanite/products.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:commissions' %}">Commissions</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:commissions' %}">Commissions</a>{% endblock %}
+
+{% block tabs %}
+	{{ block.super }}
+	
+	<ul class="tabs">
+		<li><a href="{% url 'index:trinkets' %}">Code Trinkets</a></li>
+		<li><a href="{% url 'index:3dmodels' %}">3D Models</a></li>
+	</ul>
+{% endblock %}
 
 {% block content %}
 	<ul class="listing">

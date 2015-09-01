@@ -8,9 +8,9 @@
 		<title>Starman Innovations</title>
 		
 		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static 'starmanite/shell.css' %}" />
-	
-		{% block head %}{% endblock %}
+		{% block styling %}
+			<link rel="stylesheet" type="text/css" href="{% static 'starmanite/shell.css' %}" />
+		{% endblock %}
 	</head>
 	
 	<body>
@@ -24,8 +24,8 @@
 			{% block body %}{% endblock %}
 		</div>
 
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		{% block hfscripts %}
+		{% block scripts %}
+			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		{% endblock %}
 	</body>
 </html>

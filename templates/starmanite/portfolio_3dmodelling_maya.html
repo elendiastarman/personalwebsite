@@ -1,32 +1,26 @@
 {% extends 'starmanite/portfolio_3dmodelling.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:maya' %}">Maya</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:maya' %}">Maya</a>{% endblock %}
 
 {% block content %}
-	<div id="content">
+	<p>Rich and Jody and the Mines of Doom &mdash; July&ndash;August <br/>
+		<object data="http://www.youtube.com/v/RP4Q-HJezPs" width="560" height="315">
+			<param name="allowFullScreen" value="true"></param>
+			<param name="allowscriptaccess" value="always"></param>
+			There should be a YouTube video embedded here. Here's the <a href="http://www.youtube.com/v/RP4Q-HJezPs">link</a>.
+		</object> <br/>
+		<em>I worked in a team of four to create this entirely in Maya <br/> (and After Effects for putting the clips together).</em>
+	</p>
 	
-		<p id="maya" class="section"><a href="#maya">Maya</a></p>
-		
-		<p>Rich and Jody and the Mines of Doom &mdash; July&ndash;August <br/>
-			<object data="http://www.youtube.com/v/RP4Q-HJezPs" width="560" height="315">
-				<param name="allowFullScreen" value="true"></param>
-				<param name="allowscriptaccess" value="always"></param>
-				There should be a YouTube video embedded here. Here's the <a href="http://www.youtube.com/v/RP4Q-HJezPs">link</a>.
-			</object> <br/>
-			<em>I worked in a team of four to create this entirely in Maya <br/> (and After Effects for putting the clips together).</em></p>
-		
-		<p>Summer Academy 2011 Showcase &mdash; June&ndash;August <br/>
-			<object data="http://www.youtube.com/v/OZVZc5xgXPo" width="560" height="315">
-				<param name="allowFullScreen" value="true"></param>
-				<param name="allowscriptaccess" value="always"></param>
-				There should be a YouTube video embedded here. Here's the <a href="http://www.youtube.com/v/OZVZc5xgXPo">link</a>.
-			</object> <br/>
-			<em>I did the piano at 0:26, four mouse textures starting at 0:55 (Darth Maul, female Chewbacca, <br/>
-			Pikachu, and tiger), and the humanoid holding up the end of the plank at 5:10.</em></p>
-
-	</div>
+	<p>Summer Academy 2011 Showcase &mdash; June&ndash;August <br/>
+		<object data="http://www.youtube.com/v/OZVZc5xgXPo" width="560" height="315">
+			<param name="allowFullScreen" value="true"></param>
+			<param name="allowscriptaccess" value="always"></param>
+			There should be a YouTube video embedded here. Here's the <a href="http://www.youtube.com/v/OZVZc5xgXPo">link</a>.
+		</object> <br/>
+		<em>I did the piano at 0:26, four mouse textures starting at 0:55 (Darth Maul, female Chewbacca, <br/>
+		Pikachu, and tiger), and the humanoid holding up the end of the plank at 5:10.</em>
+	</p>
 {% endblock %}

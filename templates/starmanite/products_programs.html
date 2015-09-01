@@ -1,29 +1,13 @@
 {% extends 'starmanite/products.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:programs' %}">Programs</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:programs' %}">Programs</a>{% endblock %}
 
 {% block content %}
 	<ul class="listing">
 		<li><ul class="listing-item">
 			<li><a href="{% url 'index:arbychess' %}">ArbyChess</a></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-		</ul></li>
-		
-		<li><ul class="listing-item">
-			<li><a href="{% url 'index:spinningtop' %}">Spinning Top Simulator</a></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
-		</ul></li>
-		
-		<li><ul class="listing-item">
-			<li><a href="{% url 'index:lumien-game' %}">Lumien the Hedgehog</a></li>
 			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
 			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>
 			<li><img src="{% static 'placeholder_small.png' %}" alt="placeholder image" /></li>

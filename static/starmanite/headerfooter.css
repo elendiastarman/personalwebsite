@@ -106,3 +106,10 @@ hr { border-color: gold; }
 #content * {
 	max-width: 100%;
 }
+
+.section {
+	font-size: 16pt;
+}
+.section:first-child {
+	margin-top: 0px;
+}

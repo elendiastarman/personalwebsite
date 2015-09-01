@@ -1,18 +1,16 @@
 {% extends 'starmanite/writing.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path2 %} > <a href="{% url 'index:academic' %}">Academic</a>{% block path3 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:academic' %}">Academic</a>{% endblock %}
 
 {% block content %}
 	<ul class="listing">
 		<li><ul class="listing-item">
 			<li><a href="{% url 'index:conceptweb' %}">A Concept-Web Model of Language</a></li>
-			<li><p style="text-align: justify;">The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.<br/><br/><br/></p></li>
-			<li><p style="text-align: justify;">If a concept is known but a label is missing, then the person who wants to communicate that concept to others must do so by way of related concepts.<br/><br/><br/></p></li>
-			<li><p style="text-align: justify;">Concept-labels in the “middle” that are connected to many others are more difficult to alter as doing so would require altering ... the associations between it and other concept-labels, and would ... also require ... some adjustment of related concept-labels.</p></li>
+			<li><p style="text-align: justify; margin: 0;">The model under consideration is that concepts in a person's mind have labels attached to them and that these concepts are linked in a web of relationships.<br/><br/><br/></p></li>
+			<li><p style="text-align: justify; margin: 0;">If a concept is known but a label is missing, then the person who wants to communicate that concept to others must do so by way of related concepts.<br/><br/><br/></p></li>
+			<li><p style="text-align: justify; margin: 0;">Concept-labels in the “middle” that are connected to many others are more difficult to alter as doing so would require altering the associ-ations between it and other concept-labels, and would also require some adjustment of related concept-labels.</p></li>
 		</ul></li>
 	</ul>
 {% endblock %}

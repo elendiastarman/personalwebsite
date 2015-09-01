@@ -1,45 +1,28 @@
 {% extends 'starmanite/portfolio_2dartwork.html' %}
 
 {% load staticfiles %}
-{% block stylingAndScripts %}
-{% endblock %}
 
-{% block path3 %} > <a href="{% url 'index:doodles' %}">Doodles</a>{% block path4 %}{% endblock %}{% endblock %}
+{% block path %}{{ block.super }} > <a href="{% url 'index:doodles' %}">Doodles</a>{% endblock %}
 
 {% block content %}
+	<p><strong>Circa 2007-2011</strong><br/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0002.jpg' %}" alt="playing with S/Z and L shapes" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0003.jpg' %}" alt="various impossible triangle structures" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0004.jpg' %}" alt="half-finished Sierpinski carpet" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0005.jpg' %}" alt="level 2 Menger sponge" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0006.jpg' %}" alt="impossible Sierpinski triangle, impossible Star of David, and possible cube-star-like structure" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0007.jpg' %}" alt="Sierpinski triangle and cube fractal" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0008.jpg' %}" alt="plain impossible Sierpinski triangle" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0009.jpg' %}" alt="larger cube fractal and triangular spiral prime pattern" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/SCAN0010.jpg' %}" alt="various triangular flat knots" width="25%"/>
+	</p>
 	
-	<div id="content">
-		<div id="minitoc" style="float: right; border: 1px solid #500070; margin: 0px; padding: 20px;">
-			<p style="margin-top: 0px;">Mini table of contents</p>
-			<ul style="list-style-type: none; text-align: right; margin-top: 0px; margin-bottom: 0px;">
-				<li><strong>Doodles</strong></li>
-				<li><a href="{% url 'index:sprites' %}">Sprite Comics</a></li>
-				<li><a href="{% url 'index:art-misc' %}">Miscellaneous</a></li>
-			</ul>
-		</div>
-	
-		<p id="doodles" class="section"><a href="#doodles">Doodles</a></p>
-		
-		<p><strong>Circa 2007-2011</strong><br/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0002.jpg' %}" alt="playing with S/Z and L shapes" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0003.jpg' %}" alt="various impossible triangle structures" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0004.jpg' %}" alt="half-finished Sierpinski carpet" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0005.jpg' %}" alt="level 2 Menger sponge" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0006.jpg' %}" alt="impossible Sierpinski triangle, impossible Star of David, and possible cube-star-like structure" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0007.jpg' %}" alt="Sierpinski triangle and cube fractal" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0008.jpg' %}" alt="plain impossible Sierpinski triangle" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0009.jpg' %}" alt="larger cube fractal and triangular spiral prime pattern" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/SCAN0010.jpg' %}" alt="various triangular flat knots" width="25%"/>
-		</p>
-		
-		<br/><p><strong>Circa 2011-2013</strong><br/>
-		<img src="{% static 'starmanite/2D examples/Doodles/squareBraidDoodles.png' %}" alt="square braids and knots" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/celticKnots_2.png' %}" alt="a bunch of doodled knots" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/lotusKnot.png' %}" alt="various doodles including a lotus knot" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/celticKnot_1.png' %}" alt="intricate Celtic knot" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/twistedTriquetraTriangle.jpg' %}" alt="twisted triquetra triangular knot" width="25%"/>
-		<img src="{% static 'starmanite/2D examples/Doodles/knottedSurfaceComplements.jpg' %}" alt="two knotted surfaces that are complements of each other" width="25%"/>
-		</p>
-
-	</div>
+	<br/><p><strong>Circa 2011-2013</strong><br/>
+	<img src="{% static 'starmanite/2D examples/Doodles/squareBraidDoodles.png' %}" alt="square braids and knots" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/celticKnots_2.png' %}" alt="a bunch of doodled knots" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/lotusKnot.png' %}" alt="various doodles including a lotus knot" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/celticKnot_1.png' %}" alt="intricate Celtic knot" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/twistedTriquetraTriangle.jpg' %}" alt="twisted triquetra triangular knot" width="25%"/>
+	<img src="{% static 'starmanite/2D examples/Doodles/knottedSurfaceComplements.jpg' %}" alt="two knotted surfaces that are complements of each other" width="25%"/>
+	</p>
 {% endblock %}
