@@ -60,7 +60,7 @@ document.ready = function() {
 		});
 	}
 	
-	$('.listing-item > li').has('img').each(function(i,e) {
+	$('.listing-item > li').has('img').not('.exclude-from-vertical-align').each(function(i,e) {
 		e.innerHTML = "<div class='vertical-align-help-middle'>"+e.innerHTML+"</div>";
 	});
 	$('.listing-item > li').has('p').each(function(i,e) {

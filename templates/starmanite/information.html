@@ -19,10 +19,11 @@
 	<ul class="listing">
 		<li><ul class="listing-item">
 			<li>About</li>
-			<li>
+			<li class="exclude-from-vertical-align">
 				<a href="{% url 'index:contact' %}">Contact</a>
 				<br/>
 				<img src="{% static 'starmanite/atSymbol.png' %}" alt="curly at symbol"/>
+				<!-- <div style="background-image: url('{% static 'starmanite/atSymbol.png' %}');"></div> -->
 			</li>
 			<li>
 				<a href="{% url 'index:resume' %}">Current Resume</a>

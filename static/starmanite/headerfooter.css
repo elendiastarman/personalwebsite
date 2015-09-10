@@ -71,15 +71,20 @@ hr { border-color: gold; }
 	margin: 10px 0 0 0;
 }
 
+.vertical-align-help-top {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
 .vertical-align-help-middle {
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
 }
-.vertical-align-help-top {
+.vertical-align-help-bottom {
 	display: inline-block;
 	text-align: center;
-	vertical-align: top;
+	vertical-align: bottom;
 }
 
 .listing-item > li:first-child {
