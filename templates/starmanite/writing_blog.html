@@ -5,12 +5,19 @@
 {% block path %}{{ block.super }} > <a href="{% url 'index:blog' %}">Blog</a>{% endblock %}
 
 {% block content %}
-	<ul class="listing"><li>
-		<ul class="listing-item">
+	<ul class="listing">
+		<li><ul class="listing-item">
 			<li><a href="http://www.starmaninnovations.com/blog/category/hyperbolic-geometry/">Hyperbolic Geometry</a></li>
 			<li><img src="{% static 'starmanite/hyperbolicGeometry_grid_thumbnail.png' %}" alt="hyperbolic geometry grid thumbnail" /></li>
 			<li><img src="{% static 'starmanite/hyperbolicGeometry_bisectedCircle_thumbnail.png' %}" alt="hyperbolic geometry bisected circle thumbnail" /></li>
 			<li><img src="{% static 'starmanite/hyperbolicGeometry_triheptagonalTiling_thumbnail.png' %}" alt="triheptagonal tiling" /></li>
-		</ul>
-	</li></ul>
+		</ul></li>
+		
+		<li><ul class="listing-item">
+			<li><a href="http://www.starmaninnovations.com/blog/category/jaw-tracking/">Jaw Tracking</a></li>
+			<li><img src="{% static 'starmanite/jawTracking_setup.png' %}" alt="jaw tracking Blender model" /></li>
+			<li><img src="{% static 'starmanite/jawTracking_leftCameraExample.png' %}" alt="how it looks from the left camera" /></li>
+			<li><img src="{% static 'starmanite/jawTracking_triangleID_left60.png' %}" alt="the two triangles identified" /></li>
+		</ul></li>
+	</ul>
 {% endblock %}
