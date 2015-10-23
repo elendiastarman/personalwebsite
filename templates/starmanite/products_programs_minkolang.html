@@ -1,0 +1,11 @@
+{% extends 'starmanite/products_programs.html' %}
+
+{% load staticfiles %}
+
+{% block path %}{{ block.super }} > <a href="{% url 'index:minkolang' %}">Minkolang</a>{% endblock %}
+
+{% block content %}
+	<h2 style="margin-top: 0px; text-align: center;" >Minkolang, a 3D stack-based semi-golfing language!</h2>
+	
+	<p>There is an <a href="http://play.starmaninnovations.com/minkolang/">online interpreter</a> as well as a <a href="https://github.com/elendiastarman/Minkolang">Python interpreter</a>. Details on how the language works can be found both on <a href="https://github.com/elendiastarman/Minkolang">GitHub</a> and on <a href="http://www.esolangs.org/wiki/Minkolang">esolangs.org</a>!</p>
+{% endblock %}

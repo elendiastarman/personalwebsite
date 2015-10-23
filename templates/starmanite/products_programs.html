@@ -4,12 +4,26 @@
 
 {% block path %}{{ block.super }} > <a href="{% url 'index:programs' %}">Programs</a>{% endblock %}
 
+{% block tabs %}
+	{{ block.super }}
+	
+	<ul class="tabs">
+		<li><a href="{% url 'index:arbychess' %}">{% block arbychess %}ArbyChess{% endblock %}</a></li>
+		<li><a href="{% url 'index:minkolang' %}">{% block minkolang %}Minkolang{% endblock %}</a></li>
+	</ul>
+	<hr/>
+{% endblock %}
+
 {% block content %}
 	<ul class="listing">
 		<li><ul class="listing-item">
 			<li><a href="{% url 'index:arbychess' %}">ArbyChess</a></li>
 			<li><img src="{% static 'starmanite/arbychess_screenshot.png' %}" alt="ArbyChess normal chess screenshot" /></li>
 			<li><img src="{% static 'starmanite/arbychessHexagonalChess_screenshot.png' %}" alt="ArbyChess hexagonal chess screenshot" /></li>
+		</ul></li>
+		<li><ul class="listing-item">
+			<li><a href="{% url 'index:minkolang' %}">Minkolang</a></li>
+			<li><img src="{% static 'starmanite/minkolang_onlineInterpreterThumbnail.png' %}" alt="thumbnail of online interpreter" /></li>
 		</ul></li>
 	</ul>
 {% endblock %}
